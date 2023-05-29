@@ -1,9 +1,9 @@
 ### Quality Policy
 > Describe your Quality Policy in detail for this Sprint (remember what I ask you to do when I talk about the "In your Project" part in the lectures and what is mentioned after each assignment (in due course you will need to fill out all of them, check which ones are needed for each Deliverable). You should keep adding things to this file and adjusting your policy as you go.
-> Check in Project: Module Concepts document on Canvas in the Project module for more details 
+> Check in Project: Module Concepts document on Canvas in the Project module for more details
 
 **GitHub Workflow** (start Sprint 1)
-  > Your Workflow
+  > For our GitHub Workflow, we'll work on our individual assigned tasks and grradually merge them into a testing branch. Once those changes are tested and functional, we'll merge that into the repo's main branch as the most updated stable build. 
 
 **Unit Tests Blackbox** (start Sprint 2)
   > Your Blackbox testing policy 
