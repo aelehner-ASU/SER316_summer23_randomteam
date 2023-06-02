@@ -1,4 +1,16 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath "gradle.plugin.com.github.johnrengelman:shadow:7.1.2"
+    }
+}
+
 apply plugin: 'application'
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
 
 mainClassName = 'main/java/memoranda/Start'
 
@@ -9,8 +21,29 @@ repositories {
   mavenCentral()
 }
 
+jar {
+    manifest {
+        attributes "Main-Class": "$mainClassName"
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': "$mainClassName"
+    }
+    archiveFileName = 'aamora_memoranda.jar'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
 dependencies {
   implementation 'com.io7m.xom:xom:1.2.+'
   implementation 'net.sourceforge.nekohtml:nekohtml:1.9.+'
+  implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+  implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
 }
-
