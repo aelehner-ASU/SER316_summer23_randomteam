@@ -95,7 +95,7 @@ public class SearchPanel extends JPanel {
         searchB.setMinimumSize(new Dimension(2, 25));
         searchB.setPreferredSize(new Dimension(70, 25));
         searchB.setMargin(new Insets(0, 0, 0, 0));
-        searchB.setText(Local.getString("Search"));
+        searchB.setText(Local.getString("Hi mom!!! Search here"));
         searchB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 searchB_actionPerformed(e);
