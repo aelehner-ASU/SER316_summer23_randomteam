@@ -1,7 +1,7 @@
 /**
  * TaskTable.java         
  * -----------------------------------------------------------------------------
- * Project           Memoranda
+ * Project           CoolestGYM
  * Package           net.sf.memoranda.ui
  * Original author   Alex V. Alishevskikh
  *                   [alexeya@gmail.com]

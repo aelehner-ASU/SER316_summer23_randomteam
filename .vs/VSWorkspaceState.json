@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\main",
+    "\\src\\main\\java",
+    "\\src\\main\\java\\memoranda",
+    "\\src\\main\\java\\memoranda\\ui"
   ],
-  "SelectedNode": "\\C:\\Users\\bekoa\\Source\\Repos\\SER316_summer23_randomteam",
+  "SelectedNode": "\\src\\main\\java\\memoranda\\ui\\AppFrame.java",
   "PreviewInSolutionExplorer": false
 }

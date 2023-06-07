@@ -62,13 +62,13 @@ public class WorkPanel extends JPanel {
 
 		this.setLayout(borderLayout1);
 		toolBar.setOrientation(JToolBar.VERTICAL);
-		toolBar.setBackground(Color.white);
+		toolBar.setBackground(Color.green);  //change from white to green
 
 		toolBar.setBorderPainted(false);
 		toolBar.setFloatable(false);
 		panel.setLayout(cardLayout1);
 
-		agendaB.setBackground(Color.white);
+		agendaB.setBackground(Color.red); //change from white to red
 		agendaB.setMaximumSize(new Dimension(60, 80));
 		agendaB.setMinimumSize(new Dimension(30, 30));
 
@@ -94,7 +94,7 @@ public class WorkPanel extends JPanel {
 		agendaB.setMargin(new Insets(0, 0, 0, 0));
 		agendaB.setSelected(true);
 
-		eventsB.setBackground(Color.white);
+		eventsB.setBackground(Color.green);  //change from white to green
 		eventsB.setMaximumSize(new Dimension(60, 80));
 		eventsB.setMinimumSize(new Dimension(30, 30));
 
@@ -265,7 +265,7 @@ public class WorkPanel extends JPanel {
 	}
 
 	void setCurrentButton(JButton cb) {
-		currentB.setBackground(Color.white);
+		currentB.setBackground(Color.green);//white to green
 		currentB.setOpaque(false);
 		currentB = cb;
 		// Default color blue

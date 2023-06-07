@@ -230,7 +230,7 @@ public class TaskPanel extends JPanel {
 
 
         this.setLayout(borderLayout1);
-        scrollPane.getViewport().setBackground(Color.white);
+        scrollPane.getViewport().setBackground(Color.green);
         /*taskTable.setMaximumSize(new Dimension(32767, 32767));
         taskTable.setRowHeight(24);*/
         ppEditTask.setFont(new java.awt.Font("Dialog", 1, 11));
@@ -641,7 +641,7 @@ public class TaskPanel extends JPanel {
         
         if (taskTable.getSelectedRows().length > 1)
             msg = Local.getString("Remove")+" "+taskTable.getSelectedRows().length +" "+Local.getString("tasks")+"?"
-             + "\n"+Local.getString("Are you sure?");
+             + "\n"+Local.getString("Make sure frist before delete!");
         else {        	
         	Task t = CurrentProject.getTaskList().getTask(thisTaskId);
         	// check if there are subtasks

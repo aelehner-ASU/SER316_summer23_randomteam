@@ -136,6 +136,7 @@ public class EventDialog extends JDialog implements WindowListener {
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         eventPanel.add(textField, gbc);
+        eventPanel.setBackground(new Color(250,0,0)); // add background color for eventpanel
         
         // Build RepeatPanel
         repeatBorder = new TitledBorder(BorderFactory.createLineBorder(

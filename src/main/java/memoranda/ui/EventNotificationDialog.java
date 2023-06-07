@@ -54,6 +54,7 @@ public class EventNotificationDialog extends JFrame {
     this.setLocationRelativeTo(null);
     this.setVisible(true);    
     this.toFront();
+    this.setBackground(Color.red); //add background color to red
     this.requestFocus();
     //jButton1.requestFocus();
   }
@@ -66,16 +67,16 @@ public class EventNotificationDialog extends JFrame {
     this.setIconImage(new ImageIcon(EventNotificationDialog.class.getResource("/ui/icons/jnotes16.png")).getImage());
     this.getContentPane().setBackground(new Color(251, 197, 63));
     border2 = BorderFactory.createEmptyBorder(0,30,0,30);
-    border3 = BorderFactory.createCompoundBorder(BorderFactory.createEtchedBorder(Color.white,new Color(142, 142, 142)),BorderFactory.createEmptyBorder(0,30,0,30));
+    border3 = BorderFactory.createCompoundBorder(BorderFactory.createEtchedBorder(Color.green,new Color(142, 142, 142)),BorderFactory.createEmptyBorder(0,30,0,30));
     border4 = BorderFactory.createEmptyBorder(10,10,0,10);
     panel1.setLayout(borderLayout1);
-    panel1.setBackground(new Color(251, 197, 63));
+    panel1.setBackground(new Color(50,100,200)); // Change background color for panel1 to Color(251, 197, 63) to (50,100,200)
     
     jButton1.setText(Local.getString("Ok"));
     jButton1.setBounds(150, 415, 95, 30);
     jButton1.setPreferredSize(new Dimension(95, 30));
     jButton1.setBackground(new Color(69, 125, 186));
-    jButton1.setForeground(Color.white);
+    jButton1.setForeground(Color.green); //color change from white to green
     jButton1.setDefaultCapable(true);
     jButton1.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(ActionEvent e) {
@@ -91,7 +92,7 @@ public class EventNotificationDialog extends JFrame {
     getContentPane().add(panel1);
     panel1.add(jPanel1,  BorderLayout.SOUTH);
     jPanel1.add(jButton1, null);
-    jPanel1.setBackground(new Color(251, 197, 63));
+    jPanel1.setBackground(new Color(251, 197, 63)); // Color(251, 197, 63) to Color(200, 100, 50)
     panel1.add(textLabel, BorderLayout.CENTER);
     panel1.add(timeLabel, BorderLayout.NORTH);
     playSoundNotification();

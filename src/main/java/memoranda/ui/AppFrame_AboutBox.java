@@ -82,7 +82,7 @@ public class AppFrame_AboutBox extends JDialog implements ActionListener {
     text += "</html>";
     
     image = new ImageIcon(AppFrame_AboutBox.class.getResource("/ui/memoranda.png"));
-    this.setTitle(Local.getString("About Memoranda"));
+    this.setTitle(Local.getString("About CoolestGYM"));
     setResizable(false);
     // Initialize Objects
     lblText.setFont(new java.awt.Font("Dialog", 0, 11));
@@ -95,7 +95,7 @@ public class AppFrame_AboutBox extends JDialog implements ActionListener {
     button1.addActionListener(this);
     button1.setPreferredSize(new Dimension(95, 30));
     button1.setBackground(new Color(69, 125, 186));
-    button1.setForeground(Color.white);
+    button1.setForeground(Color.green);
     layeredPane = getLayeredPane();
     //layeredPane.setPreferredSize(new Dimension(300, 300));
     imgLabel = new JLabel(image);

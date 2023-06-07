@@ -112,8 +112,8 @@ public class DailyItemsPanel extends JPanel {
         }
     }
     void jbInit() throws Exception {
-        border1 = BorderFactory.createEtchedBorder(Color.white, Color.gray);
-        border2 = BorderFactory.createEtchedBorder(Color.white, new Color(161, 161, 161));
+        border1 = BorderFactory.createEtchedBorder(Color.green, Color.gray);
+        border2 = BorderFactory.createEtchedBorder(Color.green, new Color(161, 161, 161));
         this.setLayout(borderLayout1);
         splitPane.setOrientation(JSplitPane.HORIZONTAL_SPLIT);
         splitPane.setBorder(null);
@@ -123,12 +123,12 @@ public class DailyItemsPanel extends JPanel {
         mainPanel.setLayout(borderLayout3);
         editorsPanel.setLayout(cardLayout1);
         statusPanel.setBackground(Color.black);
-        statusPanel.setForeground(Color.white);
+        statusPanel.setForeground(Color.green);
         statusPanel.setMinimumSize(new Dimension(14, 24));
         statusPanel.setPreferredSize(new Dimension(14, 24));
         statusPanel.setLayout(borderLayout4);
         currentDateLabel.setFont(new java.awt.Font("Dialog", 0, 16));
-        currentDateLabel.setForeground(Color.white);
+        currentDateLabel.setForeground(Color.green);
         currentDateLabel.setText(CurrentDate.get().getFullDateString());
         borderLayout4.setHgap(4);
         controlPanel.setBackground(new Color(230, 230, 230));

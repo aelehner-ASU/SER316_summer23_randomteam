@@ -154,7 +154,7 @@ public class PreferencesDialog extends JDialog {
 
 	void jbInit() throws Exception {
 		titledBorder1 = new TitledBorder(BorderFactory.createEtchedBorder(
-				Color.white, new Color(156, 156, 158)), Local
+				Color.green, new Color(156, 156, 158)), Local
 				.getString("Sound"));
 		this.setResizable(false);
 		// Build Tab1

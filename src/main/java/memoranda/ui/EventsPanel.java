@@ -132,7 +132,7 @@ public class EventsPanel extends JPanel {
             new ImageIcon(main.java.memoranda.ui.AppFrame.class.getResource("/ui/icons/event_remove.png")));
 
         this.setLayout(borderLayout1);
-        scrollPane.getViewport().setBackground(Color.white);
+        scrollPane.getViewport().setBackground(Color.green);
         eventsTable.setMaximumSize(new Dimension(32767, 32767));
         eventsTable.setRowHeight(24);
         eventPPMenu.setFont(new java.awt.Font("Dialog", 1, 10));
@@ -397,13 +397,13 @@ public class EventsPanel extends JPanel {
 
 		if(eventsTable.getSelectedRows().length > 1) 
 			msg = Local.getString("Remove") + " " + eventsTable.getSelectedRows().length 
-				+ " " + Local.getString("events") + "\n" + Local.getString("Are you sure?");
+				+ " " + Local.getString("events") + "\n" + Local.getString("Make sure befor delete");
 		else {
 			ev = (main.java.memoranda.Event) eventsTable.getModel().getValueAt(
                 eventsTable.getSelectedRow(),
                 EventsTable.EVENT);
 			msg = Local.getString("Remove event") + "\n'" 
-				+ ev.getText() + "'\n" + Local.getString("Are you sure?");
+				+ ev.getText() + "'\n" + Local.getString("Make sure befor delete");
 		}
 
         int n =

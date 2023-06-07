@@ -37,7 +37,7 @@ public class ProjectsTablePanel extends JPanel {
                             super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
                         comp.setFont(new java.awt.Font("Dialog", 1, 11));
                         if (((row % 2) > 0) && (!isSelected))
-                            comp.setBackground(new Color(230, 240, 255));
+                            comp.setBackground(new Color(100, 200, 50)); //change from Color(230, 240, 255) to Color(100, 200, 50)
                         return comp;
                     }
                 };
@@ -86,10 +86,11 @@ public class ProjectsTablePanel extends JPanel {
         projectsTable.setMaximumSize(new Dimension(32767, 32767));
         //projectsTable.setPreferredSize(new Dimension(400, 100));
         projectsTable.setGridColor(new Color(230, 230, 230));
+        //projectsTable.setBackground(new Color(100, 50, 200));
         projectsTable.setShowHorizontalLines(false);
-        /*projectsTable.setSelectionBackground(Color.white);
-        projectsTable.setSelectionForeground(Color.blue);*/
-        scrollPane.getViewport().setBackground(Color.white);
+        projectsTable.setSelectionBackground(Color.red);
+        projectsTable.setSelectionForeground(Color.blue);
+        scrollPane.getViewport().setBackground(Color.green);
         scrollPane.getViewport().add(projectsTable, null);
         this.setLayout(borderLayout1);
         this.add(scrollPane, BorderLayout.CENTER);
