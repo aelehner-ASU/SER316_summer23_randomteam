@@ -262,7 +262,7 @@ public class AppFrame extends JFrame {
         contentPane = (JPanel) this.getContentPane();
         contentPane.setLayout(borderLayout1);
         //this.setSize(new Dimension(800, 500));
-        this.setTitle("Memoranda - " + CurrentProject.get().getTitle());
+        this.setTitle("COOLEST GYM -  " + CurrentProject.get().getTitle());
         //Added a space to App.VERSION_INFO to make it look some nicer
         statusBar.setText(" Version:" + App.VERSION_INFO + " (Build "
                 + App.BUILD_INFO + " )");
@@ -301,12 +301,12 @@ public class AppFrame extends JFrame {
             }
         });        
         
-        jMenuHelpAbout.setText(Local.getString("About Memoranda"));
-        jMenuHelpAbout.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                jMenuHelpAbout_actionPerformed(e);
-            }
-        });
+        //jMenuHelpAbout.setText(Local.getString("About Memoranda"));
+       // jMenuHelpAbout.addActionListener(new ActionListener() {
+        //     public void actionPerformed(ActionEvent e) {
+        //         jMenuHelpAbout_actionPerformed(e);
+        //     }
+        // });
         //jButton3.setIcon(image3);
         jButton3.setToolTipText(Local.getString("Help"));
         splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
@@ -626,7 +626,7 @@ public class AppFrame extends JFrame {
             }
 
             public void projectWasChanged() {
-                setTitle("Memoranda - " + CurrentProject.get().getTitle());
+                setTitle("COOLEST GYM -  " + CurrentProject.get().getTitle());
             }
         });
 

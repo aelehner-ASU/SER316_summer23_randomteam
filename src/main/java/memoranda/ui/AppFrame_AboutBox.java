@@ -88,6 +88,7 @@ public class AppFrame_AboutBox extends JDialog implements ActionListener {
     lblText.setFont(new java.awt.Font("Dialog", 0, 11));
     lblText.setText(text);
     lblText.setBounds(10, 55, 300, 400);
+    lblText.setBackground(Color.green);
 
     
     button1.setText(Local.getString("Ok"));
@@ -95,7 +96,7 @@ public class AppFrame_AboutBox extends JDialog implements ActionListener {
     button1.addActionListener(this);
     button1.setPreferredSize(new Dimension(95, 30));
     button1.setBackground(new Color(69, 125, 186));
-    button1.setForeground(Color.white);
+    button1.setForeground(Color.blue);
     layeredPane = getLayeredPane();
     //layeredPane.setPreferredSize(new Dimension(300, 300));
     imgLabel = new JLabel(image);
