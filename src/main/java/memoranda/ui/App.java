@@ -67,7 +67,7 @@ public class App {
 			if (Configuration.get("LOOK_AND_FEEL").equals("system"))
 				UIManager.setLookAndFeel(
 					UIManager.getSystemLookAndFeelClassName());
-			else if (Configuration.get("LOOK_AND_FEEL").equals("default"))
+			else if (Configuration.get("LOOK_AND_FEEL").equals("Coolgym"))
 				UIManager.setLookAndFeel(
 					UIManager.getCrossPlatformLookAndFeelClassName());					
 			else if (

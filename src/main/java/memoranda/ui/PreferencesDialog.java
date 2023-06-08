@@ -188,7 +188,7 @@ public class PreferencesDialog extends JDialog {
 			}
 		});
 		jLabel6.setText(Local.getString("Sound file") + ":");
-		soundDefaultRB.setText(Local.getString("Default"));
+		soundDefaultRB.setText(Local.getString("Coolgym"));
 		soundDefaultRB.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				soundDefaultRB_actionPerformed(e);

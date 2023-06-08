@@ -152,7 +152,7 @@ public class ProjectsPanel extends JPanel implements ExpandablePanel {
 		ppNewProject.setAction(newProjectAction);
 
 		ppProperties.setFont(new java.awt.Font("Dialog", 1, 11));
-		ppProperties.setText(Local.getString("Project properties"));
+		ppProperties.setText(Local.getString("CoolestGYM  properties"));
 		ppProperties.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ppProperties_actionPerformed(e);
@@ -400,9 +400,9 @@ public class ProjectsPanel extends JPanel implements ExpandablePanel {
 	}
 
 	void ppProperties_actionPerformed(ActionEvent e) {
-		Project prj = prjTablePanel.getSelectedProject();
+		Project  prj = prjTablePanel.getSelectedProject();
 		ProjectDialog dlg =
-			new ProjectDialog(null, Local.getString("Project properties"));
+			new ProjectDialog(null, Local.getString("CoolestGYM  properties"));
 		Dimension dlgSize = dlg.getSize();
 		Dimension frmSize = App.getFrame().getSize();
 		Point loc = App.getFrame().getLocation();
