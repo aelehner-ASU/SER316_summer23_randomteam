@@ -9,8 +9,35 @@ repositories {
   mavenCentral()
 }
 
+ext {
+    versionNumber = '1.0.0'
+    buildNumber = generateBuildNumber()
+}
+
+
+def generateBuildNumber() {
+    def timestamp = new Date().format('yyyyMMddHHmmss')
+    return timestamp
+}
+
+
 dependencies {
   implementation 'com.io7m.xom:xom:1.2.+'
   implementation 'net.sourceforge.nekohtml:nekohtml:1.9.+'
 }
 
+
+
+java {
+   // Other configurations here
+
+   defaultConfig {
+       // Other defaultConfig configurations here
+       versionCode buildNumber.toInteger()
+       versionName versionNumber
+
+       // Generate buildConfigField for build and version number
+       buildConfigField 'String', 'BUILD_NUMBER', "\"${buildNumber}\""
+       buildConfigField 'String', 'VERSION_NUMBER', "\"${versionNumber}\""
+   }
+}
