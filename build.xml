@@ -1,0 +1,23 @@
+<project name="memoranda" default="build" basedir=".">
+
+    <!-- Define version number -->
+    <property name="versionNumber" value="1.0.0" />
+
+    <!-- Target to generate build number -->
+    <target name="generateBuildNumber">
+        <tstamp>
+            <format property="buildNumber" pattern="yyyyMMddHHmmss" />
+        </tstamp>
+    </target>
+
+    <!-- Build target -->
+    <target name="build" depends="generateBuildNumber">
+        <!-- Other build steps -->
+        <echo message="Building version ${versionNumber} - build ${buildNumber}" />
+        <!-- More build steps -->
+    </target>
+
+    <!-- Default target -->
+    <target name="default" depends="build" />
+
+</project>
