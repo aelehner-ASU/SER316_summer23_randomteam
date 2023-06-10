@@ -164,9 +164,9 @@ public class AgendaPanel extends JPanel {
 						Element pre_sticker=(Element)((Map)EventsManager.getStickers()).get(id);
 						String sticker = pre_sticker.getValue();
 						sticker=sticker.replaceAll("<br>","\n");
-						int first=sticker.indexOf(">");
-						int last=sticker.lastIndexOf("<");
-						int backcolor=sticker.indexOf("#");
+						int first=sticker.indexOf(">");  //the symbols that are not displayed correctly
+						int last=sticker.lastIndexOf("<");  //the symbols that are not displayed correctly
+						int backcolor=sticker.indexOf("#");  //the symbols that are not displayed correctly
 						int fontcolor=sticker.indexOf("#", backcolor+1);
 						int sizeposition=sticker.indexOf("font-size")+10;
 						int size=Integer.parseInt(sticker.substring(sizeposition,sizeposition+2));
@@ -182,7 +182,7 @@ public class AgendaPanel extends JPanel {
 							 		(frmSize.height - dlg.getSize().height) / 2 + loc.y);
 						dlg.setVisible(true);
 						if (!dlg.CANCELLED) {
-							String txt = dlg.getStickerText();
+							String txt = dlg.getStickerText();   // the symbols that are not displayed correctly
 							sP = dlg.getPriority();
 							txt = txt.replaceAll("\\n", "<br>");
 							txt = "<div style=\"background-color:"+dlg.getStickerColor()+";font-size:"+dlg.getStickerTextSize()+";color:"+dlg.getStickerTextColor()+";\">"+txt+"</div>";
@@ -195,7 +195,7 @@ public class AgendaPanel extends JPanel {
 						 /*  It remains to add the export sticker in the meantime...*/
 						 final JFrame parent = new JFrame();
 						 String name = JOptionPane.showInputDialog(parent,Local.getString("Enter file name to export"),null);
-						 new ExportSticker(name).export("txt");
+						 new ExportSticker(name).export("txt");      //the symbols that are not displayed correctly
 						 //JOptionPane.showMessageDialog(null,name);
 					}else if (d.startsWith("memoranda:exportstickersh")) {
 						 /*  Falta agregar el exportar sticker mientras tanto..*/
