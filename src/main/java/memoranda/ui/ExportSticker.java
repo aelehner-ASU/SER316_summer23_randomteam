@@ -69,12 +69,15 @@ public class ExportSticker {
                         fwrite.write(contents);
                         
                         fwrite.close();
-                        JOptionPane.showMessageDialog(null,Local.getString("Document successfully created in your folder Memoranda =D"));
-            
+
+                        JOptionPane.showMessageDialog(null,Local.getString("Document successfully created in your folder Memoranda =D")); // the areas where the language is not displayed in English.
+
             
         } catch (IOException e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null,Local.getString("We were NOT able to create your document Search fo =(..."));
+
+            JOptionPane.showMessageDialog(null,Local.getString("We were NOT able to create your document =(...")); // the areas where the language is not displayed in English.
+
         }
                 
                 

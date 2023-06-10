@@ -194,18 +194,25 @@ public class AgendaPanel extends JPanel {
 					}else if (d.startsWith("memoranda:exportstickerst")) {
 						 /*  It remains to add the export sticker in the meantime...*/
 						 final JFrame parent = new JFrame();
-						 String name = JOptionPane.showInputDialog(parent,Local.getString("Enter file name to export"),null);
-						 new ExportSticker(name).export("txt");      //the symbols that are not displayed correctly
+
+						 String name = JOptionPane.showInputDialog(parent,Local.getString("Enter file name to export"),null); // the areas where the language is not displayed in English.
+						 new ExportSticker(name).export("txt");
+
+
 						 //JOptionPane.showMessageDialog(null,name);
 					}else if (d.startsWith("memoranda:exportstickersh")) {
 						 /*  Falta agregar el exportar sticker mientras tanto..*/
 						 final JFrame parent = new JFrame();
-						 String name = JOptionPane.showInputDialog(parent,Local.getString("Enter file name to export"),null);
+
+						 String name = JOptionPane.showInputDialog(parent,Local.getString("Enter file name to export"),null);// the areas where the language is not displayed in English.
+
 						 new ExportSticker(name).export("html");
 						//  JOptionPane.showMessageDialog(null,name);
 					}else if (d.startsWith("memoranda:importstickers")) {
 						final JFrame parent = new JFrame();
-						String name = JOptionPane.showInputDialog(parent,Local.getString("Enter file name to import"),null);
+
+						String name = JOptionPane.showInputDialog(parent,Local.getString("Enter file name to import"),null);  // the areas where the language is not displayed in English.
+
 						new ImportSticker(name).import_file();
 					}
 				}
