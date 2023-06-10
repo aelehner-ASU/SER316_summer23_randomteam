@@ -510,10 +510,10 @@ public class PreferencesDialog extends JDialog {
 				cancelB_actionPerformed(e);
 			}
 		});
-		bottomPanel.add(cancelB);
+		bottomPanel.add(cancelB);  //sympols not displayed correctly
 
 		// Build Preferences-Dialog
-		getContentPane().add(topPanel, BorderLayout.NORTH);
+		getContentPane().add(topPanel, BorderLayout.NORTH);  
 		getContentPane().add(bottomPanel, BorderLayout.SOUTH);
 		soundPanel.add(enableSoundCB, BorderLayout.NORTH);
 
@@ -814,7 +814,7 @@ public class PreferencesDialog extends JDialog {
 		UIManager.put("FileChooser.cancelButtonToolTipText", Local
 				.getString("Cancel"));
 
-		JFileChooser chooser = new JFileChooser();
+		JFileChooser chooser = new JFileChooser();  //sympols not displayed correctly
 		chooser.setFileHidingEnabled(false);
 		chooser.setDialogTitle(Local
 				.getString("Select the web-browser executable"));
@@ -859,7 +859,7 @@ public class PreferencesDialog extends JDialog {
 
 		JFileChooser chooser = new JFileChooser();
 		chooser.setFileHidingEnabled(false);
-		chooser.setDialogTitle(Local.getString("Select the sound file"));
+		chooser.setDialogTitle(Local.getString("Select the sound file"));   //sympols not displayed correctly
 		chooser.setAcceptAllFileFilterUsed(true);
 		chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
 		chooser.setPreferredSize(new Dimension(550, 375));
@@ -885,9 +885,9 @@ public class PreferencesDialog extends JDialog {
         	GraphicsEnvironment.getLocalGraphicsEnvironment();
         String envfonts[] = gEnv.getAvailableFontFamilyNames();
         Vector fonts = new Vector();
-        fonts.add("serif");
-        fonts.add("sans-serif");
-        fonts.add("monospaced");
+        fonts.add("Roboto Mono");       
+        fonts.add("Proggy");
+        fonts.add("Futura");
         for (int i = 0; i < envfonts.length; i++)
             fonts.add(envfonts[i]);
 		return fonts;

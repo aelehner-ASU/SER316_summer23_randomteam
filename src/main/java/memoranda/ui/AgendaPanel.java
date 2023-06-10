@@ -164,9 +164,9 @@ public class AgendaPanel extends JPanel {
 						Element pre_sticker=(Element)((Map)EventsManager.getStickers()).get(id);
 						String sticker = pre_sticker.getValue();
 						sticker=sticker.replaceAll("<br>","\n");
-						int first=sticker.indexOf(">");
-						int last=sticker.lastIndexOf("<");
-						int backcolor=sticker.indexOf("#");
+						int first=sticker.indexOf(">");   //sympols not displayed correctly
+						int last=sticker.lastIndexOf("<");  //sympols not displayed correctly
+						int backcolor=sticker.indexOf("#");  //sympols not displayed correctly
 						int fontcolor=sticker.indexOf("#", backcolor+1);
 						int sizeposition=sticker.indexOf("font-size")+5;
 						int size=Integer.parseInt(sticker.substring(sizeposition,sizeposition+2));
@@ -184,8 +184,8 @@ public class AgendaPanel extends JPanel {
 						if (!dlg.CANCELLED) {
 							String txt = dlg.getStickerText();
 							sP = dlg.getPriority();
-							txt = txt.replaceAll("\\n", "<br>");
-							txt = "<div style=\"background-color:"+dlg.getStickerColor()+";font-size:"+dlg.getStickerTextSize()+";color:"+dlg.getStickerTextColor()+";\">"+txt+"</div>";
+							txt = txt.replaceAll("\\n", "<br>");    //sympols not displayed correctly
+							txt = "<div style=\"background-color:"+dlg.getStickerColor()+";font-size:"+dlg.getStickerTextSize()+";color:"+dlg.getStickerTextColor()+";\">"+txt+"</div>"; //sympols not displayed correctly
 							EventsManager.removeSticker(id);
 							EventsManager.createSticker(txt, sP);
 							CurrentStorage.get().storeEventsManager();
@@ -194,8 +194,8 @@ public class AgendaPanel extends JPanel {
 					}else if (d.startsWith("memoranda:exportstickerst")) {
 						 /*  Falta agregar el exportar sticker mientras tanto..*/
 						 final JFrame parent = new JFrame();
-						 String name = JOptionPane.showInputDialog(parent,Local.getString("Ingrese nombre de archivo a exportar"),null);
-						 new ExportSticker(name).export("txt");
+						 String name = JOptionPane.showInputDialog(parent,Local.getString("Ingrese nombre de archivo a exportar"),null); //English not display
+						 new ExportSticker(name).export("txt");  //sympols not displayed correctly
 						 //JOptionPane.showMessageDialog(null,name);
 					}else if (d.startsWith("memoranda:exportstickersh")) {
 						 /*  Falta agregar el exportar sticker mientras tanto..*/
