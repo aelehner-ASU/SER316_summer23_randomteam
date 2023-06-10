@@ -626,7 +626,7 @@ public class AppFrame extends JFrame {
             }
 
             public void projectWasChanged() {
-                setTitle("CoolestGYM -  - " + CurrentProject.get().getTitle());
+                setTitle("Memoranda - " + CurrentProject.get().getTitle());
             }
         });
 
