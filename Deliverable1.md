@@ -14,24 +14,24 @@
 ### Sprint Planning (For Sprint 1-3)
 Document your Sprint Planning here. Also check the kickoff document for more details on what needs to be done. This is just the documentation. 
 
-**Sprint Goal:** Your Sprint goal
+**Sprint Goal:** For Sprint 1, complete most tasks, if not all tasks, to understand how to better manage working on a larger project at once. 
+Sprint 1 will help tune what we want to accomplish with the changes made to the app.
 
-**How many User Stories did you add to the Product Backlog:**  Number
+**How many User Stories did you add to the Product Backlog:**
+> Eight.
 
 **How many User Stories did you add to this Sprint:** 
-> Answer the questions below about your Sprint Planning?
+> All eight.
 
 **Why did you add these US, why do you think you can get them done in the next Sprint?**
-
-> Your Answer
+> Required to help get us started and experience how to create and add US to Sprints.
 
 **Why do you think these fit well with your Sprint goal? (details)**
-
-> Your Answer
+> The US added, guide us on fixes that will help us in the longer run. For example, testing functions will 
+> be easier to understand without incorrect messages or random characters.
 
 **Do you have a rough idea what you need to do? (if the answer is no then please let me know on Slack)**
-
-> Your Answer
+> Yes.
 
 
 
@@ -44,17 +44,20 @@ I would also advise you to already fill out the Contributions section (End of sp
 
 | Date  | Who did not attend  |Meeting notes (very brief)   | Burndown Info (on track, ahead behind is enough) | TravisCI info (does the master pass) | Additional Info  |
 |---|---|---|---|--|--|
-|   |   |   |   |  |  |
-|   |   |   |   |  |  |
-|   |   |   |   |  |  |
+| 5/30 | Tanya, Bereket | Discuss US and GIt pulls  |  n/a | n/a | none |
+| 6/8  | Anna, Tanya  | US tasks, approve pulls | n/a  | n/a | none |
+| 6/9  | Tanya, Anna, Chris | Updating on status | n/a  | n/a  | none |
+| 6/10 | Anna, Tanya | Update Git, finish Deliverable | n/a  | n/a | none |
 
 ### Meeting Summary:
 
 > Add rows as needed and add the number how many meetings for each team member:
 
-   Name1 : Num Meetings
-
-   Name2 : Num Meetings
+   Adam : 4
+   Chris : 3
+   Bereket : 3
+   Anna : 1
+   Tanya : 0
 
 
 ## 3: After the Sprint
