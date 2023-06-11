@@ -53,7 +53,7 @@ I would also advise you to already fill out the Contributions section (End of sp
 
 > Add rows as needed and add the number how many meetings for each team member:
 
-   Adam : 4
+   Alan : 4
    Chris : 3
    Bereket : 3
    Anna : 1
@@ -88,37 +88,63 @@ Answer as a team!
 
 **Did you meet your sprint goal?**
 
-> Your Answer
+> Our sprint goal was not met as we did not manage to finish all our Spint US. We must continue to work on our communication skills and work better as a team. There was a lot of confusion towards the beginning but got our bairing together towards the end.
 
 **Did you complete all stories on your Spring Backlog?**
 
-> Your Answer
+> We did not finish all of our User Stories as we had 3 User Stories still in need of completion
 
 **If not, what went wrong?**
 
-> Your Answer
+> Terrible communication skills, with some confusion costed us a lot of time which made us behind schedule.
 
 **Did you work at a consistent rate of speed, or velocity? (Meaning did you work during the whole Sprint or did you start working when the deadline approached.)**
 
-> Your Answer
+> we did not work at a conssistnetn rate as the first week we spend mostly coordinating together rather then spening working on US.
 
 **Did you deliver business value?**
 
-> Your Answer
+> We delivered some business value as we did progress with the project but not a sufficient amount.
 
 **Are there things the team thinks it can do better in the next Sprint?**
 
-> Your Answer
+> We must work better on meeting 3 times a week to conduct StandUp meetings.
 
 **How do you feel at this point? Get a pulse on the optimism of the team.**
 
-> Your Answer
+> We have a lot to work on but we have the potensial to have a very effient team.
 
 ### Contributions:
 
 > In this section I want you to point me to your main contributions (each of you individually). Some of the topcs are not needed for the first deliverables (you should know which things you should have done in this Sprint, if you don't then you have probably missed something):
 
-#### Team member A -- replace this with your name:
+#### Alan Morales -- replace this with your name:
+  **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
+
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/b90c073726b9d8a4a8d0047f014b60efbc652d91
+    - link2
+
+   **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
+
+    - link1
+    - link2
+
+  **GitHub links to your Code Reviews (up to 3 links) -- Sprint 2 and 3:
+
+    - link1
+    - link2
+
+  **How did you contribute to Static Analysis -- Sprint 3:
+
+    - link1
+    - link2
+ 
+ **What was your main contribution to the Quality Policy documentation?:
+
+    - I helped coordinate and assisted with ideas.
+    
+    
+#### Chris Boyd -- replace this with your name:
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
 
     - link1
@@ -142,6 +168,82 @@ Answer as a team!
  **What was your main contribution to the Quality Policy documentation?:
 
     - info
+    
+#### Bereket Amonie -- replace this with your name:
+  **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
+
+    - link1
+    - link2
+
+   **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
+
+    - link1
+    - link2
+
+  **GitHub links to your Code Reviews (up to 3 links) -- Sprint 2 and 3:
+
+    - link1
+    - link2
+
+  **How did you contribute to Static Analysis -- Sprint 3:
+
+    - link1
+    - link2
+ 
+ **What was your main contribution to the Quality Policy documentation?:
+
+    - info
+    
+#### Anna Lehner -- replace this with your name:
+  **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
+
+    - link1
+    - link2
+
+   **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
+
+    - link1
+    - link2
+
+  **GitHub links to your Code Reviews (up to 3 links) -- Sprint 2 and 3:
+
+    - link1
+    - link2
+
+  **How did you contribute to Static Analysis -- Sprint 3:
+
+    - link1
+    - link2
+ 
+ **What was your main contribution to the Quality Policy documentation?:
+
+    - info
+        
+#### Tanya Mercado -- replace this with your name:
+  **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
+
+    - link1
+    - link2
+
+   **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
+
+    - link1
+    - link2
+
+  **GitHub links to your Code Reviews (up to 3 links) -- Sprint 2 and 3:
+
+    - link1
+    - link2
+
+  **How did you contribute to Static Analysis -- Sprint 3:
+
+    - link1
+    - link2
+ 
+ **What was your main contribution to the Quality Policy documentation?:
+
+    - info
+    
   
 ## 4: Checklist for you to see if you are done
 - [ ] Filled out the complete form from above, all fields are filled and written in full sentences
