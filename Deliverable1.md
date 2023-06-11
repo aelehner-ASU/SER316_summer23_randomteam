@@ -171,8 +171,11 @@ Answer as a team!
 #### Bereket Amonie -- replace this with your name:
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
 
-    - link1
-    - link2
+- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/6e4b3b80b7c7fe356f8f14e13c48a468d865bf05
+- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/e5ea7d225346ee4f900e5752b64b2b587ab92783
+- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/8fff5cbddd2dd7438eba3f050273065ea7678edf
+- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/7f032514c3f43b07785ac081b7e3f299888d1a6b
+- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/8fff5cbddd2dd7438eba3f050273065ea7678edf
 
    **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
 
@@ -196,8 +199,8 @@ Answer as a team!
 #### Anna Lehner -- replace this with your name:
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
 
-    - link1
-    - link2
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/2c2bd934de551ce88650fe613dffb20e335910a9
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/d29f4262c825316bb8d04528e7f36111472bc087
 
    **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
 
@@ -245,15 +248,18 @@ Answer as a team!
     
   
 ## 4: Checklist for you to see if you are done
-- [ ] Filled out the complete form from above, all fields are filled and written in full sentences
-- [ ] Read the kickoff again to make sure you have all the details
-- [ ] User Stories that were not completed, were left in the Sprint and a copy created
-- [ ] Your Quality Policies are accurate and up to date
+- [X] Filled out the complete form from above, all fields are filled and written in full sentences
+- [X] Read the kickoff again to make sure you have all the details
+- [X] User Stories that were not completed, were left in the Sprint and a copy created
+- [X] Your Quality Policies are accurate and up to date
 - [ ] **Individual** Survey was submitted **individually** (create checkboxes below -- see Canvas to get link)
-  - [ ] Team member 1
-  - [ ] Team member 2
+  - [ ] Chris
+  - [ ] Anna
+  - [ ] Tanya
+  - [ ] Bereket
+  - [ ] Alan
 - [ ] The original of this file was copied for the next Sprint (needed for all but last Sprint where you do not need to copy it anymore)
   - [ ] Basic information (part 1) for next Sprint was included (meaning Spring Planning is complete)
   - [ ] All User Stories have acceptance tests
   - [ ] User Stories in your new Sprint Backlog have initial tasks which are in New
-  - [ ] You know how to proceed
+  - [X] You know how to proceed
