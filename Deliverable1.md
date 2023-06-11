@@ -196,8 +196,8 @@ Answer as a team!
 #### Anna Lehner -- replace this with your name:
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
 
-    - link1
-    - link2
+    - [link1](https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/2c2bd934de551ce88650fe613dffb20e335910a9)
+    - [link2](https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/d29f4262c825316bb8d04528e7f36111472bc087)
 
    **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
 
