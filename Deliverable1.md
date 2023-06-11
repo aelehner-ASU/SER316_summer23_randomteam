@@ -147,8 +147,7 @@ Answer as a team!
 #### Chris Boyd -- replace this with your name:
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
 
-    - link1
-    - link2
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/pull/2
 
    **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
 
@@ -167,7 +166,7 @@ Answer as a team!
  
  **What was your main contribution to the Quality Policy documentation?:
 
-    - info
+    - Helping in planning scrum workflow. 
     
 #### Bereket Amonie -- replace this with your name:
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
