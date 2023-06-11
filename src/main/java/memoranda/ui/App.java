@@ -35,8 +35,8 @@ public class App {
        The actual values are substituted by the Ant build script using 
        'version' property and datestamp.*/
 
-	public static final String VERSION_INFO = "@VERSION@";
-	public static final String BUILD_INFO = "@BUILD@";
+	public static final String VERSION_INFO = "@VERSION@"; //the symbols that are not displayed correctly
+	public static final String BUILD_INFO = "@BUILD@";  //the symbols that are not displayed correctly
 	
 	/*========================================================================*/
 
@@ -141,7 +141,9 @@ public class App {
 	public static void closeWindow() {
 		if (frame == null)
 			return;
+
 		frame.dispose();
+		frame.doExit();
 	}
 
 	/**

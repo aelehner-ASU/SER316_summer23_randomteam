@@ -124,14 +124,14 @@ public class AppFrame extends JFrame {
         };
         
         public Action importNotesAction =
-                        new AbstractAction(Local.getString("Import multiple notes")) {
+                        new AbstractAction(Local.getString("Import multiple notes")) { //the symbols that are not displayed correctly
 
                         public void actionPerformed(ActionEvent e) {
                                 ppImport_actionPerformed(e);
                         }
                 };
         public Action importOneNoteAction =
-                new AbstractAction(Local.getString("Import one note")) {
+                new AbstractAction(Local.getString("Import one note")) { //the symbols that are not displayed correctly
 
                 public void actionPerformed(ActionEvent e) {
                         p1Import_actionPerformed(e);
@@ -265,7 +265,7 @@ public class AppFrame extends JFrame {
         this.setTitle("Memoranda - " + CurrentProject.get().getTitle());
         //Added a space to App.VERSION_INFO to make it look some nicer
         statusBar.setText(" Version:" + App.VERSION_INFO + " (Build "
-                + App.BUILD_INFO + " )");
+                + App.BUILD_INFO + " )");  //the symbols that are not displayed correctly
 
         jMenuFile.setText(Local.getString("File"));
         jMenuFileExit.setText(Local.getString("Exit"));
@@ -294,7 +294,7 @@ public class AppFrame extends JFrame {
             }
         });
         
-        jMenuHelpBug.setText(Local.getString("Report a bug"));
+        jMenuHelpBug.setText(Local.getString("Report a bug")); 
         jMenuHelpBug.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 jMenuHelpBug_actionPerformed(e);
