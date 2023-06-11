@@ -112,10 +112,34 @@ Answer as a team!
 > Your Answer
 
 ### Contributions:
-
 > In this section I want you to point me to your main contributions (each of you individually). Some of the topcs are not needed for the first deliverables (you should know which things you should have done in this Sprint, if you don't then you have probably missed something):
+### Bereket Amonie
+>I believe I made fair amount of contributions for this sprint. Besides my code commits I have contributed to the groups organization as the sprint master and i try to made sure the team was progressing according to schedule.
 
-#### Team member A -- replace this with your name:
+#### Bereket Amonie:
+  **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
+
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/6e4b3b80b7c7fe356f8f14e13c48a468d865bf05
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/e5ea7d225346ee4f900e5752b64b2b587ab92783
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/8fff5cbddd2dd7438eba3f050273065ea7678edf
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/7f032514c3f43b07785ac081b7e3f299888d1a6b
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/8fff5cbddd2dd7438eba3f050273065ea7678edf
+    
+    
+    
+    #### Team member A -- replace this with your name:
+  **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
+
+    - link1
+    - link2
+    
+    #### Team member A -- replace this with your name:
+  **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
+
+    - link1
+    - link2
+    
+    #### Team member A -- replace this with your name:
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
 
     - link1
@@ -135,6 +159,8 @@ Answer as a team!
 
     - link1
     - link2
+    
+    
  
  **What was your main contribution to the Quality Policy documentation?:
 
