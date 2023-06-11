@@ -50,7 +50,7 @@ public class AgendaPanel extends JPanel {
 	JButton historyForwardB = new JButton();
 	JButton export = new JButton();
 	JEditorPane viewer = new JEditorPane("text/html", "");
-	String[] priorities = {"Very high","high","Medium","low","Very low"};
+	String[] priorities = {"Muy Alta","Alta","Media","Baja","Muy Baja"};
 	JScrollPane scrollPane = new JScrollPane();
 
 	DailyItemsPanel parentPanel = null;
@@ -126,7 +126,7 @@ public class AgendaPanel extends JPanel {
 							CurrentStorage.get().storeEventsManager();
 						}
 						refresh(CurrentDate.get());
-						System.out.println("I added a sticker");
+						System.out.println("agregué un sticker");
 					} else if (d.startsWith("memoranda:expandsubtasks")) {
 						String id = d.split("#")[1];
 						gotoTask = id;
@@ -164,9 +164,9 @@ public class AgendaPanel extends JPanel {
 						Element pre_sticker=(Element)((Map)EventsManager.getStickers()).get(id);
 						String sticker = pre_sticker.getValue();
 						sticker=sticker.replaceAll("<br>","\n");
-						int first=sticker.indexOf(">");  //the symbols that are not displayed correctly
-						int last=sticker.lastIndexOf("<");  //the symbols that are not displayed correctly
-						int backcolor=sticker.indexOf("#");  //the symbols that are not displayed correctly
+						int first=sticker.indexOf(">");
+						int last=sticker.lastIndexOf("<");
+						int backcolor=sticker.indexOf("#");
 						int fontcolor=sticker.indexOf("#", backcolor+1);
 						int sizeposition=sticker.indexOf("font-size")+10;
 						int size=Integer.parseInt(sticker.substring(sizeposition,sizeposition+2));
@@ -182,7 +182,7 @@ public class AgendaPanel extends JPanel {
 							 		(frmSize.height - dlg.getSize().height) / 2 + loc.y);
 						dlg.setVisible(true);
 						if (!dlg.CANCELLED) {
-							String txt = dlg.getStickerText();   // the symbols that are not displayed correctly
+							String txt = dlg.getStickerText();
 							sP = dlg.getPriority();
 							txt = txt.replaceAll("\\n", "<br>");
 							txt = "<div style=\"background-color:"+dlg.getStickerColor()+";font-size:"+dlg.getStickerTextSize()+";color:"+dlg.getStickerTextColor()+";\">"+txt+"</div>";
@@ -192,27 +192,20 @@ public class AgendaPanel extends JPanel {
 						 }
 						 refresh(CurrentDate.get());
 					}else if (d.startsWith("memoranda:exportstickerst")) {
-						 /*  It remains to add the export sticker in the meantime...*/
+						 /*  Falta agregar el exportar sticker mientras tanto..*/
 						 final JFrame parent = new JFrame();
-
-						 String name = JOptionPane.showInputDialog(parent,Local.getString("Enter file name to export"),null); // the areas where the language is not displayed in English.
+						 String name = JOptionPane.showInputDialog(parent,Local.getString("Ingrese nombre de archivo a exportar"),null);
 						 new ExportSticker(name).export("txt");
-
-
 						 //JOptionPane.showMessageDialog(null,name);
 					}else if (d.startsWith("memoranda:exportstickersh")) {
 						 /*  Falta agregar el exportar sticker mientras tanto..*/
 						 final JFrame parent = new JFrame();
-
-						 String name = JOptionPane.showInputDialog(parent,Local.getString("Enter file name to export"),null);// the areas where the language is not displayed in English.
-
+						 String name = JOptionPane.showInputDialog(parent,Local.getString("Ingrese nombre de archivo a exportar"),null);
 						 new ExportSticker(name).export("html");
-						//  JOptionPane.showMessageDialog(null,name);
+						 //JOptionPane.showMessageDialog(null,name);
 					}else if (d.startsWith("memoranda:importstickers")) {
 						final JFrame parent = new JFrame();
-
-						String name = JOptionPane.showInputDialog(parent,Local.getString("Enter file name to import"),null);  // the areas where the language is not displayed in English.
-
+						String name = JOptionPane.showInputDialog(parent,Local.getString("Ingrese nombre de archivo a importar"),null);
 						new ImportSticker(name).import_file();
 					}
 				}
@@ -239,7 +232,7 @@ public class AgendaPanel extends JPanel {
 		historyForwardB.setText("");
 
 		this.setLayout(borderLayout1);
-		scrollPane.getViewport().setBackground(Color.CYAN);
+		scrollPane.getViewport().setBackground(Color.white);
 
 		scrollPane.getViewport().add(viewer, null);
 		this.add(scrollPane, BorderLayout.CENTER);
