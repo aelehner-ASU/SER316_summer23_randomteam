@@ -194,7 +194,7 @@ Answer as a team!
  
  **What was your main contribution to the Quality Policy documentation?:
 
-    - info
+    - I believe I made fair amount of contributions for this sprint. Besides my code commits I have contributed to the groups organization as the sprint master and made sure the team was progressing according to schedule.
     
 #### Anna Lehner -- replace this with your name:
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
@@ -256,10 +256,10 @@ Answer as a team!
   - [ ] Chris
   - [ ] Anna
   - [ ] Tanya
-  - [ ] Bereket
+  - [X] Bereket
   - [ ] Alan
 - [ ] The original of this file was copied for the next Sprint (needed for all but last Sprint where you do not need to copy it anymore)
-  - [ ] Basic information (part 1) for next Sprint was included (meaning Spring Planning is complete)
-  - [ ] All User Stories have acceptance tests
+  - [X] Basic information (part 1) for next Sprint was included (meaning Spring Planning is complete)
+  - [X] All User Stories have acceptance tests
   - [ ] User Stories in your new Sprint Backlog have initial tasks which are in New
   - [X] You know how to proceed
