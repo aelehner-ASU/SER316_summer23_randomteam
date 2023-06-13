@@ -194,7 +194,7 @@ Answer as a team!
  
  **What was your main contribution to the Quality Policy documentation?:
 
-    - info
+    - I believe I made fair amount of contributions for this sprint. Besides my code commits I have contributed to the groups organization as the sprint master and made sure the team was progressing according to schedule.
     
 #### Anna Lehner -- replace this with your name:
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
