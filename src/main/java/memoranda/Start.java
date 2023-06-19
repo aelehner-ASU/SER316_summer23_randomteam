@@ -11,8 +11,13 @@ package main.java.memoranda;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 import main.java.memoranda.ui.*;
 import main.java.memoranda.util.Configuration;
+import memoranda.ui.App;
+import memoranda.ui.ExceptionDialog;
 
 /**
  *
@@ -44,6 +49,15 @@ public class Start {
     }
     
     public static void main(String[] args) {
+
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                ScheduleFrame frame = new ScheduleFrame();
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setVisible(true);
+            }
+        });
+        
         if (checkIfAlreadyStartet) {
             try {
                 // Try to open a socket. If socket opened successfully (app is already started), take no action and exit.

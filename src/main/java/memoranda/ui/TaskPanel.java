@@ -46,7 +46,7 @@ public class TaskPanel extends JPanel {
     JButton historyBackB = new JButton();
     JToolBar tasksToolBar = new JToolBar();
     JButton historyForwardB = new JButton();
-    JButton newTaskB = new JButton();
+    JButton OverallSchedual = new JButton();
     JButton subTaskB = new JButton();
     JButton editTaskB = new JButton();
     JButton removeTaskB = new JButton();
@@ -99,28 +99,28 @@ public class TaskPanel extends JPanel {
         historyForwardB.setMaximumSize(new Dimension(24, 24));
         historyForwardB.setText("");
 
-        newTaskB.setIcon(
+        OverallSchedual.setIcon(
             new ImageIcon(main.java.memoranda.ui.AppFrame.class.getResource("/ui/icons/todo_new.png")));
-        newTaskB.setEnabled(true);
-        newTaskB.setMaximumSize(new Dimension(24, 24));
-        newTaskB.setMinimumSize(new Dimension(24, 24));
-        newTaskB.setToolTipText(Local.getString("Create new task"));
-        newTaskB.setRequestFocusEnabled(false);
-        newTaskB.setPreferredSize(new Dimension(24, 24));
-        newTaskB.setFocusable(false);
-        newTaskB.addActionListener(new java.awt.event.ActionListener() {
+        OverallSchedual.setEnabled(true);
+        OverallSchedual.setMaximumSize(new Dimension(24, 24));
+        OverallSchedual.setMinimumSize(new Dimension(24, 24));
+        OverallSchedual.setToolTipText(Local.getString("Create the overall schedule")); //Change new task to new overall shedule
+        OverallSchedual.setRequestFocusEnabled(false);
+        OverallSchedual.setPreferredSize(new Dimension(24, 24));
+        OverallSchedual.setFocusable(false);
+        OverallSchedual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                newTaskB_actionPerformed(e);
+                OverallSchedual_actionPerformed(e);
             }
         });
-        newTaskB.setBorderPainted(false);
+        OverallSchedual.setBorderPainted(false);
         
         subTaskB.setIcon(
             new ImageIcon(main.java.memoranda.ui.AppFrame.class.getResource("/ui/icons/todo_new_sub.png")));
         subTaskB.setEnabled(true);
         subTaskB.setMaximumSize(new Dimension(24, 24));
         subTaskB.setMinimumSize(new Dimension(24, 24));
-        subTaskB.setToolTipText(Local.getString("Add subtask"));
+        subTaskB.setToolTipText(Local.getString("Create an individual schedule"));
         subTaskB.setRequestFocusEnabled(false);
         subTaskB.setPreferredSize(new Dimension(24, 24));
         subTaskB.setFocusable(false);
@@ -230,7 +230,7 @@ public class TaskPanel extends JPanel {
 
 
         this.setLayout(borderLayout1);
-        scrollPane.getViewport().setBackground(Color.white);
+        scrollPane.getViewport().setBackground(Color.lightGray);
         /*taskTable.setMaximumSize(new Dimension(32767, 32767));
         taskTable.setRowHeight(24);*/
         ppEditTask.setFont(new java.awt.Font("Dialog", 1, 11));
@@ -316,12 +316,13 @@ public class TaskPanel extends JPanel {
         tasksToolBar.add(historyForwardB, null);
         tasksToolBar.addSeparator(new Dimension(8, 24));
 
-        tasksToolBar.add(newTaskB, null);
+        tasksToolBar.add(OverallSchedual, null);
         tasksToolBar.add(subTaskB, null);
         tasksToolBar.add(removeTaskB, null);
         tasksToolBar.addSeparator(new Dimension(8, 24));
         tasksToolBar.add(editTaskB, null);
         tasksToolBar.add(completeTaskB, null);
+        tasksToolBar.setBackground(Color.CYAN);
 
 		//tasksToolBar.add(showActiveOnly, null);
         
@@ -336,12 +337,12 @@ public class TaskPanel extends JPanel {
 
         CurrentDate.addDateListener(new DateListener() {
             public void dateChange(CalendarDate d) {
-                newTaskB.setEnabled(d.inPeriod(CurrentProject.get().getStartDate(), CurrentProject.get().getEndDate()));
+                OverallSchedual.setEnabled(d.inPeriod(CurrentProject.get().getStartDate(), CurrentProject.get().getEndDate()));
             }
         });
         CurrentProject.addProjectListener(new ProjectListener() {
             public void projectChange(Project p, NoteList nl, TaskList tl, ResourcesList rl) {
-                newTaskB.setEnabled(
+                OverallSchedual.setEnabled(
                     CurrentDate.get().inPeriod(p.getStartDate(), p.getEndDate()));
             }
             public void projectWasChanged() {
@@ -399,6 +400,7 @@ public class TaskPanel extends JPanel {
     taskPPMenu.addSeparator();
 	taskPPMenu.add(ppCompleteTask);
 	taskPPMenu.add(ppCalcTask);
+    
 	
     //taskPPMenu.addSeparator();
     
@@ -488,8 +490,8 @@ public class TaskPanel extends JPanel {
         //taskTable.updateUI();
     }
 
-    void newTaskB_actionPerformed(ActionEvent e) {
-        TaskDialog dlg = new TaskDialog(App.getFrame(), Local.getString("New task"));
+    void OverallSchedual_actionPerformed(ActionEvent e) {
+        TaskDialog dlg = new TaskDialog(App.getFrame(), Local.getString("overall Schedual"));
         
         //XXX String parentTaskId = taskTable.getCurrentRootTask();
         
@@ -740,7 +742,7 @@ public class TaskPanel extends JPanel {
     removeTaskB_actionPerformed(e);
   }
   void ppNewTask_actionPerformed(ActionEvent e) {
-    newTaskB_actionPerformed(e);
+    OverallSchedual_actionPerformed(e);
   }
 
   void ppAddSubTask_actionPerformed(ActionEvent e) {

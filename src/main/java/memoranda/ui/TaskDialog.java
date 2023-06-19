@@ -65,7 +65,127 @@ public class TaskDialog extends JDialog {
     JTextField effortField = new JTextField();
     JTextArea descriptionField = new JTextArea();
     JScrollPane descriptionScrollPane = new JScrollPane(descriptionField);
+    ////////new code ////
+    JLabel overallScheduleLabel = new JLabel("Overall Schedule:"); ;
+    JTextArea overallScheduleTextArea = new JTextArea();
     
+    // JscrollPane
+    JScrollPane overallScheduleScrollPane = new JScrollPane(overallScheduleTextArea);
+
+    // mpanel.add(overallScheduleLabel);
+    // mPanel.add(overallScheduleScrollPane);
+
+    // Add a button to refresh the schedule
+        // JButton refreshButton = new JButton("Refresh");
+        // refreshButton.addActionListener(new ActionListener() {
+        //     @Override
+        //     public void actionPerformed(ActionEvent e) {
+        //         // Simulate fetching schedule data from a data source
+        //         String overallSchedule = fetchOverallSchedule();
+        //         String individualSchedule = fetchIndividualSchedule();
+
+        //         overallScheduleTextArea.setText(overallSchedule);
+        //         individualScheduleTextArea.setText(individualSchedule);
+        //     }
+        // });
+
+        
+
+/*
+ * 
+
+public class ScheduleApp {
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                ScheduleFrame frame = new ScheduleFrame();
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setVisible(true);
+            }
+        });
+    }
+}
+
+class ScheduleFrame extends JFrame {
+    private SchedulePanel overallSchedulePanel;
+    private SchedulePanel individualSchedulePanel;
+
+    public ScheduleFrame() {
+        setTitle("Schedule App");
+        setSize(800, 600);
+        setLocationRelativeTo(null);
+
+        overallSchedulePanel = new SchedulePanel("Overall Schedule");
+        individualSchedulePanel = new SchedulePanel("Individual Schedule");
+
+        JButton overallScheduleButton = new JButton("View Overall Schedule");
+        overallScheduleButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                showOverallSchedule();
+            }
+        });
+
+        JButton individualScheduleButton = new JButton("View Individual Schedule");
+        individualScheduleButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                showIndividualSchedule();
+            }
+        });
+
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.add(overallScheduleButton);
+        buttonPanel.add(individualScheduleButton);
+
+        setLayout(new BorderLayout());
+        add(buttonPanel, BorderLayout.NORTH);
+        add(overallSchedulePanel, BorderLayout.CENTER);
+    }
+
+    private void showOverallSchedule() {
+        remove(individualSchedulePanel);
+        add(overallSchedulePanel, BorderLayout.CENTER);
+        validate();
+        repaint();
+    }
+
+    private void showIndividualSchedule() {
+        remove(overallSchedulePanel);
+        add(individualSchedulePanel, BorderLayout.CENTER);
+        validate();
+        repaint();
+    }
+}
+
+class SchedulePanel extends JPanel {
+    private String scheduleName;
+    private JTextArea scheduleTextArea;
+
+    public SchedulePanel(String name) {
+        scheduleName = name;
+        scheduleTextArea = new JTextArea(10, 30);
+        scheduleTextArea.setEditable(false);
+
+        JScrollPane scrollPane = new JScrollPane(scheduleTextArea);
+
+        setLayout(new BorderLayout());
+        add(new JLabel(scheduleName), BorderLayout.NORTH);
+        add(scrollPane, BorderLayout.CENTER);
+    }
+
+    public void setScheduleText(ArrayList<String> schedule) {
+        StringBuilder sb = new StringBuilder();
+        for (String entry : schedule) {
+            sb.append(entry);
+            sb.append("\n");
+        }
+        scheduleTextArea.setText(sb.toString());
+    }
+}
+
+ */
+
+
+
 //    Border border7;
     Border border8;
     CalendarFrame startCalFrame = new CalendarFrame();
@@ -122,11 +242,12 @@ public class TaskDialog extends JDialog {
     void jbInit() throws Exception {
 	this.setResizable(false);
 	this.setSize(new Dimension(430,300));
+    this.setBackground(Color.blue);
         border1 = BorderFactory.createEmptyBorder(5, 5, 5, 5);
         border2 = BorderFactory.createEtchedBorder(Color.white, 
             new Color(142, 142, 142));
         border3 = new TitledBorder(BorderFactory.createEmptyBorder(0, 0, 10, 0), 
-        Local.getString("To Do"), TitledBorder.LEFT, TitledBorder.BELOW_TOP);
+        Local.getString("The Overall Schedule"), TitledBorder.LEFT, TitledBorder.BELOW_TOP);
         border4 = BorderFactory.createEmptyBorder(0, 5, 0, 5);
 //        border5 = BorderFactory.createEmptyBorder();
 //        border6 = BorderFactory.createBevelBorder(BevelBorder.LOWERED,
@@ -167,14 +288,16 @@ public class TaskDialog extends JDialog {
         
         this.getRootPane().setDefaultButton(okB);
         mPanel.setBorder(border1);
+        mPanel.setBackground(Color.orange);
         areaPanel.setBorder(border2);
+        areaPanel.setBackground(Color.BLUE);
         dialogTitlePanel.setBackground(Color.WHITE);
         dialogTitlePanel.setBorder(border4);
         //dialogTitlePanel.setMinimumSize(new Dimension(159, 52));
         //dialogTitlePanel.setPreferredSize(new Dimension(159, 52));
         header.setFont(new java.awt.Font("Dialog", 0, 20));
-        header.setForeground(new Color(0, 0, 124));
-        header.setText(Local.getString("To do"));
+        header.setForeground(new Color(20, 10, 124));
+        header.setText(Local.getString("The Overall Schedule"));
         header.setIcon(new ImageIcon(main.java.memoranda.ui.TaskDialog.class.getResource(
             "/ui/icons/task48.png")));
         
@@ -325,6 +448,7 @@ public class TaskDialog extends JDialog {
 
         priorityCB.setFont(new java.awt.Font("Dialog", 0, 11));
         jPanel4.add(jLabel7, null);
+        jPanel4.setBackground(Color.ORANGE);
         getContentPane().add(mPanel);
         mPanel.add(areaPanel, BorderLayout.CENTER);
         mPanel.add(buttonsPanel, BorderLayout.SOUTH);
