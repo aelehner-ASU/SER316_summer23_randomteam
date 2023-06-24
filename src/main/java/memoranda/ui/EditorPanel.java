@@ -84,14 +84,14 @@ public class EditorPanel extends JPanel {
 
 	JButton previewB = new JButton();
 
-	DailyItemsPanel parentPanel = null;
+	main.java.memoranda.ui.DailyItemsPanel parentPanel = null;
 
-	public EditorPanel(DailyItemsPanel parent) {
+	public EditorPanel(main.java.memoranda.ui.DailyItemsPanel parent) {
 		try {
 			parentPanel = parent;
 			jbInit();
 		} catch (Exception ex) {
-			new ExceptionDialog(ex);
+			new main.java.memoranda.ui.ExceptionDialog(ex);
 		}
 	}
 

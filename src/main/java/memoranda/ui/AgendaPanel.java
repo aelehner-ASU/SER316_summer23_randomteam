@@ -53,7 +53,7 @@ public class AgendaPanel extends JPanel {
 	String[] priorities = {"Very high","high","Medium","low","Very low"};
 	JScrollPane scrollPane = new JScrollPane();
 
-	DailyItemsPanel parentPanel = null;
+	main.java.memoranda.ui.DailyItemsPanel parentPanel = null;
 
 	//	JPopupMenu agendaPPMenu = new JPopupMenu();
 	//	JCheckBoxMenuItem ppShowActiveOnlyChB = new JCheckBoxMenuItem();
@@ -63,12 +63,12 @@ public class AgendaPanel extends JPanel {
 
 	boolean isActive = true;
 
-	public AgendaPanel(DailyItemsPanel _parentPanel) {
+	public AgendaPanel(main.java.memoranda.ui.DailyItemsPanel _parentPanel) {
 		try {
 			parentPanel = _parentPanel;
 			jbInit();
 		} catch (Exception ex) {
-			new ExceptionDialog(ex);
+			new main.java.memoranda.ui.ExceptionDialog(ex);
 			ex.printStackTrace();
 		}
 	}
@@ -94,7 +94,7 @@ public class AgendaPanel extends JPanel {
 						CurrentProject.set(ProjectManager.getProject(id));
 					} else if (d.startsWith("memoranda:removesticker")) {
                         String id = d.split("#")[1];
-                        StickerConfirmation stc = new StickerConfirmation(App.getFrame());
+                        main.java.memoranda.ui.StickerConfirmation stc = new main.java.memoranda.ui.StickerConfirmation(App.getFrame());
                         Dimension frmSize = App.getFrame().getSize();
                         stc.setSize(new Dimension(300,180));
                         Point loc = App.getFrame().getLocation();

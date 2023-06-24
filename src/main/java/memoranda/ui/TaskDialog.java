@@ -68,8 +68,8 @@ public class TaskDialog extends JDialog {
     
 //    Border border7;
     Border border8;
-    CalendarFrame startCalFrame = new CalendarFrame();
-    CalendarFrame endCalFrame = new CalendarFrame();
+    main.java.memoranda.ui.CalendarFrame startCalFrame = new main.java.memoranda.ui.CalendarFrame();
+    main.java.memoranda.ui.CalendarFrame endCalFrame;
     String[] priority = {Local.getString("Lowest"), Local.getString("Low"),
         Local.getString("Normal"), Local.getString("High"),
         Local.getString("Highest")};
@@ -117,6 +117,7 @@ public class TaskDialog extends JDialog {
         catch (Exception ex) {
             new ExceptionDialog(ex);
         }
+        endCalFrame = new CalendarFrame();
     }
     
     void jbInit() throws Exception {
