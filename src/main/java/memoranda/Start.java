@@ -10,6 +10,9 @@ package main.java.memoranda;
 
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
 import main.java.memoranda.ui.*;
 import main.java.memoranda.util.Configuration;
@@ -64,6 +67,8 @@ public class Start {
         }
         else
             app = new App(false);
+        
+        new UserAccountThread().start();
     }
 }
 
@@ -84,5 +89,17 @@ class SLThread extends Thread {
             new ExceptionDialog(e, "Cannot create a socket connection on localhost:"+Start.DEFAULT_PORT,
             "Make sure that other software does not use the port "+Start.DEFAULT_PORT+" and examine your security settings.");
         }
+    }    
+}
+/**
+ * UserAcccountThread
+ * @author Anna Lehner
+ * Runs the user account window when starting the application
+ */
+class UserAccountThread extends Thread {
+    
+    public void run() {
+    	new main.java.memoranda.ui.UserAccountsPanel();
     }
+    
 }
