@@ -201,6 +201,7 @@ Answer as a team!
 
     - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/2c2bd934de551ce88650fe613dffb20e335910a9
     - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/d29f4262c825316bb8d04528e7f36111472bc087
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/pull/41
 
    **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
 
@@ -254,7 +255,7 @@ Answer as a team!
 - [X] Your Quality Policies are accurate and up to date
 - [ ] **Individual** Survey was submitted **individually** (create checkboxes below -- see Canvas to get link)
   - [X] Chris
-  - [ ] Anna
+  - [X] Anna
   - [ ] Tanya
   - [X] Bereket
   - [ ] Alan
