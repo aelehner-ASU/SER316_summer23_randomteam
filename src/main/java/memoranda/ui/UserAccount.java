@@ -3,7 +3,7 @@
  * Creates new user account
  *
  * @author Anna Lehner
- * @version 4/18/22 Sprint 2
+ * @version 6/15/23 Sprint 2
  */
 package main.java.memoranda.ui;
 
