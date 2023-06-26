@@ -1,13 +1,6 @@
 package main.java.memoranda.ui;
 
-import java.awt.BorderLayout;
-import java.awt.CardLayout;
-import java.awt.Color;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Insets;
-import java.awt.SystemColor;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -43,6 +36,8 @@ import main.java.memoranda.date.DateListener;
 import main.java.memoranda.util.CurrentStorage;
 import main.java.memoranda.util.Local;
 import main.java.memoranda.util.Util;
+import memoranda.ui.TaskPanel;
+
 /**
  * 
  * Copyright (c) 2003 Memoranda Team. http://memoranda.sf.net
@@ -59,12 +54,12 @@ public class DailyItemsPanel extends JPanel {
     BorderLayout borderLayout3 = new BorderLayout();
     JPanel editorsPanel = new JPanel();
     CardLayout cardLayout1 = new CardLayout();
-    public EditorPanel editorPanel = new EditorPanel(this);
+    public main.java.memoranda.ui.EditorPanel editorPanel = new main.java.memoranda.ui.EditorPanel(this);
     JLabel currentDateLabel = new JLabel();
     BorderLayout borderLayout4 = new BorderLayout();
     TaskPanel tasksPanel = new TaskPanel(this);
-    EventsPanel eventsPanel = new EventsPanel(this);
-    AgendaPanel agendaPanel = new AgendaPanel(this);
+    main.java.memoranda.ui.EventsPanel eventsPanel = new main.java.memoranda.ui.EventsPanel(this);
+    main.java.memoranda.ui.AgendaPanel agendaPanel = new main.java.memoranda.ui.AgendaPanel(this);
     ImageIcon expIcon = new ImageIcon(main.java.memoranda.ui.AppFrame.class.getResource("/ui/icons/exp_right.png"));
     ImageIcon collIcon = new ImageIcon(main.java.memoranda.ui.AppFrame.class.getResource("/ui/icons/exp_left.png"));
     ImageIcon bookmarkIcon = new ImageIcon(main.java.memoranda.ui.AppFrame.class.getResource("/ui/icons/star8.png"));
@@ -77,12 +72,12 @@ public class DailyItemsPanel extends JPanel {
     boolean dateChangedByCalendar = false;
     boolean changedByHistory = false;
     JPanel cmainPanel = new JPanel();
-    JNCalendarPanel calendar = new JNCalendarPanel();
+    main.java.memoranda.ui.JNCalendarPanel calendar = new main.java.memoranda.ui.JNCalendarPanel();
     JToolBar toggleToolBar = new JToolBar();
     BorderLayout borderLayout5 = new BorderLayout();
     Border border1;
     JButton toggleButton = new JButton();
-    WorkPanel parentPanel = null;
+    main.java.memoranda.ui.WorkPanel parentPanel = null;
     
     boolean addedToHistory = false;
     JPanel indicatorsPanel = new JPanel();
@@ -90,7 +85,7 @@ public class DailyItemsPanel extends JPanel {
     FlowLayout flowLayout1 = new FlowLayout();
     JButton taskB = new JButton();
     JPanel mainTabsPanel = new JPanel();
-    NotesControlPanel notesControlPane = new NotesControlPanel();
+    main.java.memoranda.ui.NotesControlPanel notesControlPane = new main.java.memoranda.ui.NotesControlPanel();
     CardLayout cardLayout2 = new CardLayout();
         
     JTabbedPane tasksTabbedPane = new JTabbedPane();
@@ -102,13 +97,13 @@ public class DailyItemsPanel extends JPanel {
 	
     Cursor waitCursor = new Cursor(Cursor.WAIT_CURSOR);
 
-    public DailyItemsPanel(WorkPanel _parentPanel) {
+    public DailyItemsPanel(main.java.memoranda.ui.WorkPanel _parentPanel) {
         try {
             parentPanel = _parentPanel;
             jbInit();
         }
         catch (Exception ex) {
-            new ExceptionDialog(ex);
+            main.java.memoranda.ui.ExceptionDialog exceptionDialog = new main.java.memoranda.ui.ExceptionDialog(ex);
         }
     }
     void jbInit() throws Exception {
@@ -127,7 +122,7 @@ public class DailyItemsPanel extends JPanel {
         statusPanel.setMinimumSize(new Dimension(14, 24));
         statusPanel.setPreferredSize(new Dimension(14, 24));
         statusPanel.setLayout(borderLayout4);
-        currentDateLabel.setFont(new java.awt.Font("Dialog", 0, 16));
+        currentDateLabel.setFont(new Font("Dialog", 0, 16));
         currentDateLabel.setForeground(Color.white);
         currentDateLabel.setText(CurrentDate.get().getFullDateString());
         borderLayout4.setHgap(4);
@@ -137,7 +132,7 @@ public class DailyItemsPanel extends JPanel {
         controlPanel.setPreferredSize(new Dimension(205, 170));
         //controlPanel.setMaximumSize(new Dimension(206, 170));
         //controlPanel.setSize(controlPanel.getMaximumSize());
-        calendar.setFont(new java.awt.Font("Dialog", 0, 11));
+        calendar.setFont(new Font("Dialog", 0, 11));
         calendar.setMinimumSize(new Dimension(0, 168));
         toggleToolBar.setBackground(new Color(215, 225, 250));
         toggleToolBar.setRequestFocusEnabled(false);
@@ -154,7 +149,7 @@ public class DailyItemsPanel extends JPanel {
         toggleButton.setContentAreaFilled(false);
         toggleButton.setFocusPainted(false);
         toggleButton.setMargin(new Insets(0, 0, 0, 0));
-        toggleButton.addActionListener(new java.awt.event.ActionListener() {
+        toggleButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 toggleButton_actionPerformed(e);
             }
@@ -168,7 +163,7 @@ public class DailyItemsPanel extends JPanel {
         alarmB.setToolTipText(Local.getString("Active events"));
         alarmB.setBorderPainted(false);
         alarmB.setMargin(new Insets(0, 0, 0, 0));
-        alarmB.addActionListener(new java.awt.event.ActionListener() {
+        alarmB.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 alarmB_actionPerformed(e);
             }
@@ -177,7 +172,7 @@ public class DailyItemsPanel extends JPanel {
         flowLayout1.setAlignment(FlowLayout.RIGHT);
         flowLayout1.setVgap(0);
         taskB.setMargin(new Insets(0, 0, 0, 0));
-        taskB.addActionListener(new java.awt.event.ActionListener() {
+        taskB.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 taskB_actionPerformed(e);
             }
@@ -189,7 +184,7 @@ public class DailyItemsPanel extends JPanel {
         taskB.setOpaque(false);
         taskB.setIcon(new ImageIcon(main.java.memoranda.ui.AppFrame.class.getResource("/ui/icons/task.png")));
 
-        notesControlPane.setFont(new java.awt.Font("Dialog", 1, 10));
+        notesControlPane.setFont(new Font("Dialog", 1, 10));
         mainTabsPanel.setLayout(cardLayout2);
         this.add(splitPane, BorderLayout.CENTER);
 
@@ -453,11 +448,11 @@ public class DailyItemsPanel extends JPanel {
             Task t =
                 CurrentProject.getTaskList().getTask(
                     tasksPanel
-                        .taskTable
-                        .getModel()
+                        //.taskTable
+                        //.getModel()
                         .getValueAt(tasksPanel.taskTable.getSelectedRow(), TaskTable.TASK_ID)
                         .toString());
-            calendar.jnCalendar.renderer.setTask(t);
+            //calendar.jnCalendar.renderer.setTask(t);
        //     calendar.jnCalendar.updateUI();
         }
         boolean isAg = pan.equals("AGENDA");

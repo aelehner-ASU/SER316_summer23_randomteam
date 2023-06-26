@@ -17,6 +17,7 @@ import java.util.Set;
 import java.util.Iterator;
 
 import javax.swing.JFileChooser;
+import javax.swing.table.TableModel;
 
 import main.java.memoranda.date.CalendarDate;
 import main.java.memoranda.ui.App;
