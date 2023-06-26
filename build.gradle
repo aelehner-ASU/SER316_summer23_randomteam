@@ -28,16 +28,3 @@ dependencies {
 
 
 
-java {
-   // Other configurations here
-
-   defaultConfig {
-       // Other defaultConfig configurations here
-       versionCode buildNumber.toInteger()
-       versionName versionNumber
-
-       // Generate buildConfigField for build and version number
-       buildConfigField 'String', 'BUILD_NUMBER', "\"${buildNumber}\""
-       buildConfigField 'String', 'VERSION_NUMBER', "\"${versionNumber}\""
-   }
-}
