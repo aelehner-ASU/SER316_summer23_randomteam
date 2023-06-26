@@ -7,14 +7,14 @@
 
 **Sprint Number:** 1
 
-**Scrum Master**: Bereket Amonie
+**Scrum Master**: Alan Morales
 
-**Git Master**: Anna Lehner
+**Git Master**: Christopher Boyd
 
 ### Sprint Planning (For Sprint 1-3)
-Document your Sprint Planning here. Also check the kickoff document for more details on what needs to be done. This is just the documentation. 
+Document your Sprint Planning here. Also, check the kickoff document for more details on what needs to be done. This is just the documentation. 
 
-**Sprint Goal:** For Sprint 1, complete most tasks, if not all tasks, to understand how to better manage working on a larger project at once. 
+**Sprint Goal:** For Sprint 1, complete most tasks, if not all tasks, to understand how to manage better working on a larger project at once. 
 Sprint 1 will help tune what we want to accomplish with the changes made to the app.
 
 **How many User Stories did you add to the Product Backlog:**
@@ -23,14 +23,14 @@ Sprint 1 will help tune what we want to accomplish with the changes made to the 
 **How many User Stories did you add to this Sprint:** 
 > All eight.
 
-**Why did you add these US, why do you think you can get them done in the next Sprint?**
+**Why did you add these US? Why do you think you can get them done in the next Sprint?**
 > Required to help get us started and experience how to create and add US to Sprints.
 
 **Why do you think these fit well with your Sprint goal? (details)**
 > The US added, guide us on fixes that will help us in the longer run. For example, testing functions will 
 > be easier to understand without incorrect messages or random characters.
 
-**Do you have a rough idea what you need to do? (if the answer is no then please let me know on Slack)**
+**Do you have a rough idea of what you need to do? (if the answer is no then please let me know on Slack)**
 > Yes.
 
 
@@ -84,11 +84,11 @@ Answer as a team!
 
 ### Sprint Retrospective
 
-> Include your Sprint retrospective here and answer the following questions in an evidence based manner as a team (I do not want each of your individuals opinion here but the team perspective). By evidence-based manner it means I want a Yes or No on each of these questions, and for you to provide evidence for your answer. That is, don’t just say "Yes we did work at a consistent rate because we tried hard"; say "we worked at a consistent rate because here are the following tasks we completed per team member and the rate of commits in our Git logs."
+> Include your Sprint retrospective here and answer the following questions in an evidence-based manner as a team (I do not want each of your individual's opinions here but the team perspective). In an evidence-based manner, it means I want a Yes or No on each of these questions and for you to provide evidence for your answer. That is, don’t just say "Yes we did work at a consistent rate because we tried hard"; say "we worked at a consistent rate because here are the following tasks we completed per team member and the rate of commits in our Git logs."
 
 **Did you meet your sprint goal?**
 
-> Our sprint goal was not met as we did not manage to finish all our Spint US. We must continue to work on our communication skills and work better as a team. There was a lot of confusion towards the beginning but got our bairing together towards the end.
+> Our sprint goal was not met as we did not manage to finish all our Spint US. We must continue to work on our communication skills and work better as a team. There was a lot of confusion towards the beginning but got our bearings together towards the end.
 
 **Did you complete all stories on your Spring Backlog?**
 
@@ -96,11 +96,11 @@ Answer as a team!
 
 **If not, what went wrong?**
 
-> Terrible communication skills, with some confusion costed us a lot of time which made us behind schedule.
+> Terrible communication skills, with some confusion cost us a lot of time which made us behind schedule.
 
 **Did you work at a consistent rate of speed, or velocity? (Meaning did you work during the whole Sprint or did you start working when the deadline approached.)**
 
-> we did not work at a conssistnetn rate as the first week we spend mostly coordinating together rather then spening working on US.
+> We did not work at a consistent rate as the first week we spent mostly coordinating together rather than spending working on the US.
 
 **Did you deliver business value?**
 
@@ -171,11 +171,11 @@ Answer as a team!
 #### Bereket Amonie -- replace this with your name:
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
 
-- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/6e4b3b80b7c7fe356f8f14e13c48a468d865bf05
-- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/e5ea7d225346ee4f900e5752b64b2b587ab92783
-- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/8fff5cbddd2dd7438eba3f050273065ea7678edf
-- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/7f032514c3f43b07785ac081b7e3f299888d1a6b
-- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/8fff5cbddd2dd7438eba3f050273065ea7678edf
+- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/4c05a0b47f260e2b59f15207aee0e60a56a54e8f
+- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/5e2da571c2ce308a4fcc3442c0004abd30a1d515
+- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/d0513bc80594f39bf208313d8f47579a52dbfcbe
+- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/37cc2afc1e1f1213da28503dc5d010007e41b51a
+- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/246e91fe67e62f6ddef9342a18bdb3c609f3a394
 
    **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
 
