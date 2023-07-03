@@ -65,7 +65,7 @@ I would also advise you to already fill out the Contributions section (End of sp
 ### Sprint Review
 Answer as a team!
 
-**Screen Cast link**: Your link
+**Screen Cast link**: https://www.youtube.com/watch?v=nEUFY8lVSQU
 
 > Answer the following questions as a team. 
 
@@ -194,7 +194,7 @@ Answer as a team!
  
  **What was your main contribution to the Quality Policy documentation?:
 
-    - info
+    - I believe I made fair amount of contributions for this sprint. Besides my code commits I have contributed to the groups organization as the sprint master and made sure the team was progressing according to schedule.
     
 #### Anna Lehner -- replace this with your name:
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
@@ -253,13 +253,13 @@ Answer as a team!
 - [X] User Stories that were not completed, were left in the Sprint and a copy created
 - [X] Your Quality Policies are accurate and up to date
 - [ ] **Individual** Survey was submitted **individually** (create checkboxes below -- see Canvas to get link)
-  - [ ] Chris
+  - [X] Chris
   - [ ] Anna
   - [ ] Tanya
-  - [ ] Bereket
+  - [X] Bereket
   - [ ] Alan
 - [ ] The original of this file was copied for the next Sprint (needed for all but last Sprint where you do not need to copy it anymore)
   - [ ] Basic information (part 1) for next Sprint was included (meaning Spring Planning is complete)
-  - [ ] All User Stories have acceptance tests
-  - [ ] User Stories in your new Sprint Backlog have initial tasks which are in New
+  - [X] All User Stories have acceptance tests
+  - [X] User Stories in your new Sprint Backlog have initial tasks which are in New
   - [X] You know how to proceed
