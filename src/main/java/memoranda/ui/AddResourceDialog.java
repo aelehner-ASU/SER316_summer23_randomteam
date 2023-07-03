@@ -34,7 +34,8 @@ public class AddResourceDialog extends JDialog {
     JPanel areaPanel = new JPanel(new GridBagLayout());
     GridBagConstraints gbc;
     public JRadioButton localFileRB = new JRadioButton();
-    public JCheckBox projectFileCB = new JCheckBox("Copy file to memoranda", false);
+    public JCheckBox projectFileCB = new JCheckBox(Local.getString(//cont. below
+        "Copy file to memoranda"), false);
     JLabel jLabel1 = new JLabel();
     public JTextField pathField = new JTextField();
     JButton browseB = new JButton();
@@ -69,7 +70,7 @@ public class AddResourceDialog extends JDialog {
         header.setFont(new java.awt.Font("Dialog", 0, 20));
         header.setForeground(new Color(0, 0, 124));
         header.setText(Local.getString("New resource"));
-        header.setIcon(new ImageIcon(main.java.memoranda.ui.AddResourceDialog.class.getResource(
+        header.setIcon(new ImageIcon(AddResourceDialog.class.getResource(
             "/ui/icons/resource48.png")));
         dialogTitlePanel.add(header);
         this.getContentPane().add(dialogTitlePanel, BorderLayout.NORTH);
@@ -303,10 +304,10 @@ public class AddResourceDialog extends JDialog {
 	 */
 	 
     void checkOkEnabled() {        
-         okB.setEnabled(
-            (localFileRB.isSelected() && pathField.getText().length() > 0) ||
-            (inetShortcutRB.isSelected() && urlField.getText().length() > 0)
-         );
+        okB.setEnabled(
+           (localFileRB.isSelected() && pathField.getText().length() > 0) ||
+           (inetShortcutRB.isSelected() && urlField.getText().length() > 0)
+        );
     }
 
 	/** 
@@ -314,12 +315,12 @@ public class AddResourceDialog extends JDialog {
 	 */
 	 
 	void enableFields() {
-		 pathField.setEnabled(localFileRB.isSelected());
-		 jLabel1.setEnabled(localFileRB.isSelected());
-		 browseB.setEnabled(localFileRB.isSelected());
-		 projectFileCB.setEnabled(localFileRB.isSelected());
-		 
-		 urlField.setEnabled(inetShortcutRB.isSelected());
-		 jLabel2.setEnabled(inetShortcutRB.isSelected());
+		pathField.setEnabled(localFileRB.isSelected());
+		jLabel1.setEnabled(localFileRB.isSelected());
+		browseB.setEnabled(localFileRB.isSelected());
+		projectFileCB.setEnabled(localFileRB.isSelected());
+		
+		urlField.setEnabled(inetShortcutRB.isSelected());
+		jLabel2.setEnabled(inetShortcutRB.isSelected());
 	}
 }
