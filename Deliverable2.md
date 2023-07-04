@@ -7,9 +7,9 @@
 
 **Sprint Number:** 1
 
-**Scrum Master**: Bereket Amonie
+**Scrum Master**: Christopher Boyd
 
-**Git Master**: Anna Lehner
+**Git Master**: Alan Morales
 
 ### Sprint Planning (For Sprint 1-3)
 Document your Sprint Planning here. Also check the kickoff document for more details on what needs to be done. This is just the documentation. 
@@ -179,13 +179,15 @@ Answer as a team!
 
    **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
 
-    - link1
-    - link2
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/ac62cacb0fca946fa5400aa87290313697e022da
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/6e5cf8be55d8f943bedf63afddaf4ff6cfeaef00
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/9869cc781c46f9ab798c5f739e483961606dac2f
+      
 
   **GitHub links to your Code Reviews (up to 3 links) -- Sprint 2 and 3:
 
-    - link1
-    - link2
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/44b5a983eb879b75ba56a258ce2500ecb97a4376
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/306120310e4073618154197c983d763e075bf869
 
   **How did you contribute to Static Analysis -- Sprint 3:
 
