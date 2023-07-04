@@ -91,7 +91,7 @@ public class EventsManager {
 		Day d = getDay(date);
 		if (d == null)
 			return false;
-		if (d.getElement().getChildElements("event").size() > 0)
+		if (d.getElement().getChildElements("class").size() > 0)
 			return true;
 		return false;
 	}
@@ -100,7 +100,7 @@ public class EventsManager {
 		Vector v = new Vector();
 		Day d = getDay(date);
 		if (d != null) {
-			Elements els = d.getElement().getChildElements("event");
+			Elements els = d.getElement().getChildElements("class");
 			for (int i = 0; i < els.size(); i++)
 				v.add(new EventImpl(els.get(i)));
 		}
@@ -117,7 +117,7 @@ public class EventsManager {
 		int hh,
 		int mm,
 		String text) {
-		Element el = new Element("event");
+		Element el = new Element("class");
 		el.addAttribute(new Attribute("id", Util.generateId()));
 		el.addAttribute(new Attribute("hour", String.valueOf(hh)));
 		el.addAttribute(new Attribute("min", String.valueOf(mm)));
@@ -138,7 +138,7 @@ public class EventsManager {
 		int mm,
 		String text,
 		boolean workDays) {
-		Element el = new Element("event");
+		Element el = new Element("class");
 		Element rep = _root.getFirstChildElement("repeatable");
 		if (rep == null) {
 			rep = new Element("repeatable");
@@ -164,7 +164,7 @@ public class EventsManager {
 		Element rep = _root.getFirstChildElement("repeatable");
 		if (rep == null)
 			return v;
-		Elements els = rep.getChildElements("event");
+		Elements els = rep.getChildElements("class");
 		for (int i = 0; i < els.size(); i++)
 			v.add(new EventImpl(els.get(i)));
 		return v;
@@ -228,7 +228,7 @@ public class EventsManager {
 		Day d = getDay(date);
 		if (d == null)
 			return null;
-		Elements els = d.getElement().getChildElements("event");
+		Elements els = d.getElement().getChildElements("class");
 		for (int i = 0; i < els.size(); i++) {
 			Element el = els.get(i);
 			if ((new Integer(el.getAttribute("hour").getValue()).intValue()

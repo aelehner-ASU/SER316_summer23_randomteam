@@ -1,0 +1,11 @@
+
+
+AnnaCouchPotato,mypetsname,STUDENT,
+
+ChadTheTrainer,favoritesportsteam,TRAINER,
+
+MuscleMike,noPAINnoGAIN,STUDENT,
+
+SenseiHideki,cherryblossom,TRAINER,
+
+Bailey,hotcop56,STUDENT,

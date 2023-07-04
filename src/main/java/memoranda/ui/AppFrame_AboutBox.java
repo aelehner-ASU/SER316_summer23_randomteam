@@ -83,7 +83,10 @@ public class AppFrame_AboutBox extends JDialog implements ActionListener {
     text += "</html>";
 
     image = new ImageIcon(AppFrame_AboutBox.class.getResource("/ui/memoranda.png"));
+
     this.setTitle(Local.getString("About CoolGym"));
+   
+
     setResizable(false);
     // Initialize Objects
     lblText.setFont(new java.awt.Font("Dialog", 0, 11));

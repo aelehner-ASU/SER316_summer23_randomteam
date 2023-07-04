@@ -262,7 +262,10 @@ public class AppFrame extends JFrame {
         contentPane = (JPanel) this.getContentPane();
         contentPane.setLayout(borderLayout1);
         //this.setSize(new Dimension(800, 500));
+
         this.setTitle("CoolGym - " + CurrentProject.get().getTitle());
+
+       
         //Added a space to App.VERSION_INFO to make it look some nicer
         statusBar.setText(" Version:" + App.VERSION_INFO + " (Build "
                 + App.BUILD_INFO + " )");  //the symbols that are not displayed correctly
@@ -301,7 +304,7 @@ public class AppFrame extends JFrame {
             }
         });        
         
-        jMenuHelpAbout.setText(Local.getString("About Memoranda"));
+        jMenuHelpAbout.setText(Local.getString("About Level Up Gym"));
         jMenuHelpAbout.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 jMenuHelpAbout_actionPerformed(e);
@@ -626,7 +629,9 @@ public class AppFrame extends JFrame {
             }
 
             public void projectWasChanged() {
+
                 setTitle("CoolGym - " + CurrentProject.get().getTitle());
+
             }
         });
 
