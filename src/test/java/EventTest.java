@@ -12,26 +12,26 @@ class EventTest {
         assertEquals("123", event.getId());
     }
 
-//    @Test
-//    void testGetHour() {
-//        EventImpl event = new EventImpl("123");
-//        event.setHour(10);
-//        assertEquals(10, event.getHour());
-//    }
-//
-//    @Test
-//    void testGetMinute() {
-//        EventImpl event = new EventImpl("123");
-//        event.setMinute(30);
-//        assertEquals(30, event.getMinute());
-//    }
-//
-//    @Test
-//    void testGetText() {
-//        EventImpl event = new EventImpl("123");
-//        event.setText("Sample text");
-//        assertEquals("Sample text", event.getText());
-//    }
+       st
+       d testGetHour() {
+       ntImpl event = new EventImpl("123");
+       nt.setHour(10);
+       ertEquals(10, event.getHour());
+       
+    //
+    // @Test
+    // void testGetMinute() {
+    // EventImpl event = new EventImpl("123");
+    // event.setMinute(30);
+    // assertEquals(30, event.getMinute());
+    // }
+    //
+    // @Test
+    // void testGetText() {
+    // EventImpl event = new EventImpl("123");
+    // event.setText("Sample text");
+    // assertEquals("Sample text", event.getText());
+    // }
 
     // Add more test methods for the remaining methods in the Event interface
 
@@ -49,31 +49,30 @@ class EventTest {
             return id;
         }
 
-//        public int getHour() {
-//            return hour;
-//        }
-//
-//        public void setHour(int hour) {
-//            this.hour = hour;
-//        }
-//
-//        public int getMinute() {
-//            return minute;
-//        }
-//
-//        public void setMinute(int minute) {
-//            this.minute = minute;
-//        }
-//
-//        public String getText() {
-//            return text;
-//        }
-//
-//        public void setText(String text) {
-//            this.text = text;
-//        }
+           lic int getHour() {
+           urn hour;
+           
+        
+           lic void setHour(int hour) {
+           s.hour = hour;
+           
+        //
+        // public int getMinute() {
+        // return minute;
+        // }
+        //
+        // public void setMinute(int minute) {
+        // this.minute = minute;
+        // }
+        //
+        // public String getText() {
+        // return text;
+        // }
+        //
+        // public void setText(String text) {
+        // this.text = text;
+        // }
 
         // Implement the remaining methods in the Event interface
     }
 }
-
