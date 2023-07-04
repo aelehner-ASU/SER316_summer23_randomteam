@@ -27,7 +27,7 @@ public class DefaultEventNotifier implements EventNotificationListener {
 	 */
 	public void eventIsOccured(Event ev) {		
 		new EventNotificationDialog(
-			"Memoranda event",
+			"Level Up Gym Class",
 			ev.getTimeString(),
 			ev.getText());
 	}
