@@ -1,10 +1,10 @@
-apply plugin: 'application'
-
-
 plugins {
     id "com.github.spotbugs" version "4.5.1"
     id "checkstyle"
 }
+
+apply plugin: 'application'
+
 
 mainClassName = 'main/java/memoranda/Start'
 
@@ -47,6 +47,8 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.3'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.0.3'
 }
+
+
 
 ///////////////////////////////////////////////////////////////////////
 // Configure Checkstyle
