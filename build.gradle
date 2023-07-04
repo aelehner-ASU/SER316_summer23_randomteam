@@ -26,18 +26,21 @@ dependencies {
   implementation 'net.sourceforge.nekohtml:nekohtml:1.9.+'
 }
 
+// In this section you declare where to find the dependencies of your project
+repositories {
+    jcenter()
+}
+
+// In this section you declare the dependencies for your production and test code
+// dependencies {
+//     compile "junit:junit:4.12"
+//     compile files('cls/')
+// }
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.0.3'
+}
 
 
-java {
-   // Other configurations here
-
-   defaultConfig {
-       // Other defaultConfig configurations here
-       versionCode buildNumber.toInteger()
-       versionName versionNumber
-
-       // Generate buildConfigField for build and version number
-       buildConfigField 'String', 'BUILD_NUMBER', "\"${buildNumber}\""
-       buildConfigField 'String', 'VERSION_NUMBER', "\"${versionNumber}\""
-   }
 }
