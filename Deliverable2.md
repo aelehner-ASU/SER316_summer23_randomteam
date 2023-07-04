@@ -179,15 +179,15 @@ Answer as a team!
 
    **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
 
-    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/ac62cacb0fca946fa5400aa87290313697e022da
-    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/6e5cf8be55d8f943bedf63afddaf4ff6cfeaef00
-    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/9869cc781c46f9ab798c5f739e483961606dac2f
+    - [Add testgetHour test case method to EventTest.java](https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/ac62cacb0fca946fa5400aa87290313697e022da)
+    - [Set up unit test](https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/6e5cf8be55d8f943bedf63afddaf4ff6cfeaef00)
+    - [Add  getId test case to EventTest](https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/9869cc781c46f9ab798c5f739e483961606dac2f)
       
 
   **GitHub links to your Code Reviews (up to 3 links) -- Sprint 2 and 3:
 
-    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/44b5a983eb879b75ba56a258ce2500ecb97a4376
-    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/306120310e4073618154197c983d763e075bf869
+    - [Review Add checkstyle and SpotBugs configuration](https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/44b5a983eb879b75ba56a258ce2500ecb97a4376)
+    - [Review PR Task#82](https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/9d0d7d45e183c5aaab738c9553c6c98127649e34)
 
   **How did you contribute to Static Analysis -- Sprint 3:
 
