@@ -28,7 +28,7 @@ import main.java.memoranda.util.Util;
  * Copyright (c) 2003 Memoranda Team. http://memoranda.sf.net
  */
 
-/*$Id: WorkPanel.java,v 1.9 2004/04/05 10:05:44 alexeya Exp $*/
+/* $Id: WorkPanel.java,v 1.9 2004/04/05 10:05:44 alexeya Exp $ */
 public class WorkPanel extends JPanel {
 	BorderLayout borderLayout1 = new BorderLayout();
 	JToolBar toolBar = new JToolBar();
@@ -37,8 +37,10 @@ public class WorkPanel extends JPanel {
 
 	public JButton notesB = new JButton();
 	public DailyItemsPanel dailyItemsPanel = new DailyItemsPanel(this);
+
 	public ResourcesPanel filesPanel = new ResourcesPanel();
 	public JButton agendaB = new JButton();
+	public JButton homeB = new JButton();
 	public JButton tasksB = new JButton();
 	public JButton eventsB = new JButton();
 	public JButton filesB = new JButton();
@@ -55,14 +57,13 @@ public class WorkPanel extends JPanel {
 	}
 
 	void jbInit() throws Exception {
-		border1 =
-			BorderFactory.createCompoundBorder(
+		border1 = BorderFactory.createCompoundBorder(
 				BorderFactory.createBevelBorder(
-					BevelBorder.LOWERED,
-					Color.white,
-					Color.white,
-					new Color(124, 124, 124),
-					new Color(178, 178, 178)),
+						BevelBorder.LOWERED,
+						Color.white,
+						Color.white,
+						new Color(124, 124, 124),
+						new Color(178, 178, 178)),
 				BorderFactory.createEmptyBorder(0, 2, 0, 0));
 
 		this.setLayout(borderLayout1);
@@ -94,40 +95,67 @@ public class WorkPanel extends JPanel {
 			}
 		});
 		agendaB.setIcon(
-			new ImageIcon(
-					Objects.requireNonNull(AppFrame.class.getResource(
-							"/ui/icons/agenda.png"))));
+				new ImageIcon(
+						Objects.requireNonNull(AppFrame.class.getResource(
+								"/ui/icons/agenda.png"))));
 		agendaB.setOpaque(false);
 		agendaB.setMargin(new Insets(0, 0, 0, 0));
 		agendaB.setSelected(true);
 
 		////////////////////////////////////////////////////////////////////
 
-		eventsB.setBackground(Color.white);
-		eventsB.setMaximumSize(new Dimension(60, 80));
-		eventsB.setMinimumSize(new Dimension(30, 30));
+		homeB.setBackground(Color.white);
+		homeB.setMaximumSize(new Dimension(60, 80));
+		homeB.setMinimumSize(new Dimension(30, 30));
 
-		eventsB.setFont(new java.awt.Font("Dialog", 1, 10));
-		eventsB.setPreferredSize(new Dimension(50, 50));
-		eventsB.setBorderPainted(false);
-		eventsB.setContentAreaFilled(false);
-		eventsB.setFocusPainted(false);
-		eventsB.setHorizontalTextPosition(SwingConstants.CENTER);
-		eventsB.setText(Local.getString("Classes"));
-		eventsB.setVerticalAlignment(SwingConstants.TOP);
-		eventsB.setVerticalTextPosition(SwingConstants.BOTTOM);
-		eventsB.addActionListener(new java.awt.event.ActionListener() {
+		homeB.setFont(new java.awt.Font("Dialog", 1, 10));
+		homeB.setPreferredSize(new Dimension(50, 50));
+		homeB.setBorderPainted(false);
+		homeB.setContentAreaFilled(false);
+		homeB.setFocusPainted(false);
+		homeB.setHorizontalTextPosition(SwingConstants.CENTER);
+		homeB.setText(Local.getString("Home"));
+		homeB.setVerticalAlignment(SwingConstants.TOP);
+		homeB.setVerticalTextPosition(SwingConstants.BOTTOM);
+		homeB.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				eventsB_actionPerformed(e);
+				agendaB_actionPerformed(e);
 			}
 		});
-		eventsB.setIcon(
-			new ImageIcon(
-					Objects.requireNonNull(AppFrame.class.getResource(
-							"/ui/icons/events.png"))));
-		eventsB.setOpaque(false);
-		eventsB.setMargin(new Insets(0, 0, 0, 0));
-		//eventsB.setSelected(true);
+		homeB.setIcon(
+				new ImageIcon(
+						main.java.memoranda.ui.AppFrame.class.getResource(
+								"/ui/icons/homeicon.png")));
+		homeB.setOpaque(false);
+		homeB.setMargin(new Insets(0, 0, 0, 0));
+		homeB.setSelected(true);
+		////////////////////////////////////////////////////////////////////
+
+		// eventsB.setBackground(Color.white);
+		// eventsB.setMaximumSize(new Dimension(60, 80));
+		// eventsB.setMinimumSize(new Dimension(30, 30));
+
+		// eventsB.setFont(new java.awt.Font("Dialog", 1, 10));
+		// eventsB.setPreferredSize(new Dimension(50, 50));
+		// eventsB.setBorderPainted(false);
+		// eventsB.setContentAreaFilled(false);
+		// eventsB.setFocusPainted(false);
+		// eventsB.setHorizontalTextPosition(SwingConstants.CENTER);
+		// eventsB.setText(Local.getString("Classes"));
+		// eventsB.setVerticalAlignment(SwingConstants.TOP);
+		// eventsB.setVerticalTextPosition(SwingConstants.BOTTOM);
+		// eventsB.addActionListener(new java.awt.event.ActionListener() {
+		// public void actionPerformed(ActionEvent e) {
+		// eventsB_actionPerformed(e);
+		// }
+		// });
+		// eventsB.setIcon(
+		// new ImageIcon(
+		// Objects.requireNonNull(AppFrame.class.getResource(
+		// "/ui/icons/events.png"))));
+		// eventsB.setOpaque(false);
+		// eventsB.setMargin(new Insets(0, 0, 0, 0));
+		// //eventsB.setSelected(true);
 
 		////////////////////////////////////////////////////////////////////
 
@@ -135,9 +163,9 @@ public class WorkPanel extends JPanel {
 		tasksB.setFont(new java.awt.Font("Dialog", 1, 10));
 		tasksB.setMargin(new Insets(0, 0, 0, 0));
 		tasksB.setIcon(
-			new ImageIcon(
-					Objects.requireNonNull(AppFrame.class.getResource(
-							"/ui/icons/tasks.png"))));
+				new ImageIcon(
+						Objects.requireNonNull(AppFrame.class.getResource(
+								"/ui/icons/tasks.png"))));
 		tasksB.setVerticalTextPosition(SwingConstants.BOTTOM);
 		tasksB.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -178,9 +206,9 @@ public class WorkPanel extends JPanel {
 			}
 		});
 		notesB.setIcon(
-			new ImageIcon(
-					Objects.requireNonNull(AppFrame.class.getResource(
-							"/ui/icons/notes.png"))));
+				new ImageIcon(
+						Objects.requireNonNull(AppFrame.class.getResource(
+								"/ui/icons/notes.png"))));
 		notesB.setMargin(new Insets(0, 0, 0, 0));
 		notesB.setSelected(true);
 		this.setPreferredSize(new Dimension(1073, 300));
@@ -190,9 +218,9 @@ public class WorkPanel extends JPanel {
 		filesB.setSelected(true);
 		filesB.setMargin(new Insets(0, 0, 0, 0));
 		filesB.setIcon(
-			new ImageIcon(
-					Objects.requireNonNull(AppFrame.class.getResource(
-							"/ui/icons/files.png"))));
+				new ImageIcon(
+						Objects.requireNonNull(AppFrame.class.getResource(
+								"/ui/icons/files.png"))));
 		filesB.setVerticalTextPosition(SwingConstants.BOTTOM);
 		filesB.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -215,45 +243,12 @@ public class WorkPanel extends JPanel {
 		this.add(panel, BorderLayout.CENTER);
 		panel.add(dailyItemsPanel, "DAILYITEMS");
 		panel.add(filesPanel, "FILES");
-
-		// ****************** Class Creator **********//
-
-		createClassB.setBackground(Color.white);
-		createClassB.setMinimumSize(new Dimension(30, 30));
-
-		createClassB.setFont(new java.awt.Font("Dialog", 1, 10));
-		createClassB.setPreferredSize(new Dimension(50, 50));
-		createClassB.setBorderPainted(false);
-		createClassB.setContentAreaFilled(false);
-		createClassB.setFocusPainted(false);
-		createClassB.setHorizontalTextPosition(SwingConstants.CENTER);
-		createClassB.setText(Local.getString("Class"));
-		createClassB.setVerticalAlignment(SwingConstants.TOP);
-		createClassB.setVerticalTextPosition(SwingConstants.BOTTOM);
-		createClassB.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				createClassB_actionPerformed(e);
-			}
-		});
-		createClassB.setIcon(
-				new ImageIcon(Objects.requireNonNull(
-						AppFrame.class.getResource(
-								"/ui/icons/create_class_icon.png"))));
-		createClassB.setOpaque(false);
-		createClassB.setMargin(new Insets(0, 0, 0, 0));
-		createClassB.setSelected(true);
-		
-		//*****************************************************//
-
-		toolBar.add(agendaB, null);
-		toolBar.add(eventsB, null);
+		toolBar.add(homeB, null);
+		// toolBar.add(eventsB, null);
 		toolBar.add(tasksB, null);
 		toolBar.add(notesB, null);
 		toolBar.add(filesB, null);
-		toolBar.add(createClassB, null);
-
-		currentB = agendaB;
-		// Default blue color
+		currentB = homeB;
 		currentB.setBackground(new Color(215, 225, 250));
 		currentB.setOpaque(true);
 
@@ -262,7 +257,8 @@ public class WorkPanel extends JPanel {
 		dailyItemsPanel.setBorder(null);
 		filesPanel.setBorder(null);
 
-	}
+
+		// ****************** Class Creator **********//
 
 	public void selectPanel(String pan) {
 		if (pan != null) {
@@ -286,19 +282,21 @@ public class WorkPanel extends JPanel {
 		Point loc = App.getFrame().getLocation();
 		dlg.startDate.getModel().setValue(CurrentDate.get().getDate());
 		dlg.endDate.getModel().setValue(CurrentDate.get().getDate());
-		dlg.setLocation((frmSize.width - dlg.getSize().width) / 2 + loc.x, (frmSize.height - dlg.getSize().height) / 2 + loc.y);
+		dlg.setLocation((frmSize.width - dlg.getSize().width) / 2 + loc.x,
+				(frmSize.height - dlg.getSize().height) / 2 + loc.y);
 		dlg.setVisible(true);
 		if (dlg.CANCELLED)
 			return;
 		CalendarDate sd = new CalendarDate((Date) dlg.startDate.getModel().getValue());
 		CalendarDate ed;
-		if(dlg.chkEndDate.isSelected())
+		if (dlg.chkEndDate.isSelected())
 			ed = new CalendarDate((Date) dlg.endDate.getModel().getValue());
 		else
 			ed = null;
 		long effort = Util.getMillisFromHours(dlg.trainerIDField.getText());
-		Task newTask = CurrentProject.getTaskList().createTask(sd, ed, dlg.classNameField.getText(), dlg.roomIDCB.getSelectedIndex(),effort, dlg.descriptionField.getText(),null);
-		newTask.setProgress(((Integer)dlg.progress.getValue()).intValue());
+		Task newTask = CurrentProject.getTaskList().createTask(sd, ed, dlg.classNameField.getText(),
+				dlg.roomIDCB.getSelectedIndex(), effort, dlg.descriptionField.getText(), null);
+		newTask.setProgress(((Integer) dlg.progress.getValue()).intValue());
 		CurrentStorage.get().storeTaskList(CurrentProject.getTaskList(), CurrentProject.get());
 	}
 
