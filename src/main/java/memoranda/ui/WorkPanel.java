@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.util.Date;
 import java.util.Objects;
 
+import javax.swing.AbstractButton;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -278,23 +279,35 @@ public class WorkPanel extends JPanel {
 		}
 	}
 
-	public void selectPanel(String pan) {
-		if (pan != null) {
-			if (pan.equals("NOTES"))
-				notesB_actionPerformed(null);
-			else if (pan.equals("TASKS"))
-				tasksB_actionPerformed(null);
-			else if (pan.equals("EVENTS"))
-				eventsB_actionPerformed(null);
-			else if (pan.equals("FILES"))
-				filesB_actionPerformed(null);
-		}
+	public void createClassB_actionPerformed(ActionEvent e) {
+		CreateClassDialog dlg = new CreateClassDialog(App.getFrame(), Local.getString("New class"));
+
+		Dimension frmSize = App.getFrame().getSize();
+		Point loc = App.getFrame().getLocation();
+		((Object) ((AbstractButton) dlg.startDate).getModel()).setValue(CurrentDate.get().getDate());
+		dlg.endDate.getModel().setValue(CurrentDate.get().getDate());
+		dlg.setLocation((frmSize.width - dlg.getSize().width) / 2 + loc.x,
+				(frmSize.height - dlg.getSize().height) / 2 + loc.y);
+		dlg.setVisible(true);
+		if (dlg.CANCELLED)
+			return;
+		CalendarDate sd = new CalendarDate((Date) dlg.startDate.getModel().getValue());
+		CalendarDate ed;
+		if (dlg.chkEndDate.isSelected())
+			ed = new CalendarDate((Date) dlg.endDate.getModel().getValue());
+		else
+			ed = null;
+		long effort = Util.getMillisFromHours(dlg.trainerIDField.getText());
+		Task newTask = CurrentProject.getTaskList().createTask(sd, ed, dlg.classNameField.getText(),
+				dlg.roomIDCB.getSelectedIndex(), effort, dlg.descriptionField.getText(), null);
+		newTask.setProgress(((Integer) dlg.progress.getValue()).intValue());
+		CurrentStorage.get().storeTaskList(CurrentProject.getTaskList(), CurrentProject.get());
 	}
 
 	public void agendaB_actionPerformed(ActionEvent e) {
 		cardLayout1.show(panel, "DAILYITEMS");
 		dailyItemsPanel.selectPanel("AGENDA");
-		setCurrentButton(homeB);
+		setCurrentButton(agendaB);
 		Context.put("CURRENT_PANEL", "AGENDA");
 	}
 
