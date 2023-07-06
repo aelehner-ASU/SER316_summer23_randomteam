@@ -28,7 +28,7 @@ import main.java.memoranda.util.Util;
  * Copyright (c) 2003 Memoranda Team. http://memoranda.sf.net
  */
 
-/*$Id: WorkPanel.java,v 1.9 2004/04/05 10:05:44 alexeya Exp $*/
+/* $Id: WorkPanel.java,v 1.9 2004/04/05 10:05:44 alexeya Exp $ */
 public class WorkPanel extends JPanel {
 	BorderLayout borderLayout1 = new BorderLayout();
 	JToolBar toolBar = new JToolBar();
@@ -55,14 +55,13 @@ public class WorkPanel extends JPanel {
 	}
 
 	void jbInit() throws Exception {
-		border1 =
-			BorderFactory.createCompoundBorder(
+		border1 = BorderFactory.createCompoundBorder(
 				BorderFactory.createBevelBorder(
-					BevelBorder.LOWERED,
-					Color.white,
-					Color.white,
-					new Color(124, 124, 124),
-					new Color(178, 178, 178)),
+						BevelBorder.LOWERED,
+						Color.white,
+						Color.white,
+						new Color(124, 124, 124),
+						new Color(178, 178, 178)),
 				BorderFactory.createEmptyBorder(0, 2, 0, 0));
 
 		this.setLayout(borderLayout1);
@@ -94,9 +93,9 @@ public class WorkPanel extends JPanel {
 			}
 		});
 		agendaB.setIcon(
-			new ImageIcon(
-					Objects.requireNonNull(AppFrame.class.getResource(
-							"/ui/icons/agenda.png"))));
+				new ImageIcon(
+						Objects.requireNonNull(AppFrame.class.getResource(
+								"/ui/icons/agenda.png"))));
 		agendaB.setOpaque(false);
 		agendaB.setMargin(new Insets(0, 0, 0, 0));
 		agendaB.setSelected(true);
@@ -122,12 +121,12 @@ public class WorkPanel extends JPanel {
 			}
 		});
 		eventsB.setIcon(
-			new ImageIcon(
-					Objects.requireNonNull(AppFrame.class.getResource(
-							"/ui/icons/events.png"))));
+				new ImageIcon(
+						Objects.requireNonNull(AppFrame.class.getResource(
+								"/ui/icons/events.png"))));
 		eventsB.setOpaque(false);
 		eventsB.setMargin(new Insets(0, 0, 0, 0));
-		//eventsB.setSelected(true);
+		// eventsB.setSelected(true);
 
 		////////////////////////////////////////////////////////////////////
 
@@ -135,9 +134,9 @@ public class WorkPanel extends JPanel {
 		tasksB.setFont(new java.awt.Font("Dialog", 1, 10));
 		tasksB.setMargin(new Insets(0, 0, 0, 0));
 		tasksB.setIcon(
-			new ImageIcon(
-					Objects.requireNonNull(AppFrame.class.getResource(
-							"/ui/icons/tasks.png"))));
+				new ImageIcon(
+						Objects.requireNonNull(AppFrame.class.getResource(
+								"/ui/icons/tasks.png"))));
 		tasksB.setVerticalTextPosition(SwingConstants.BOTTOM);
 		tasksB.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -178,9 +177,9 @@ public class WorkPanel extends JPanel {
 			}
 		});
 		notesB.setIcon(
-			new ImageIcon(
-					Objects.requireNonNull(AppFrame.class.getResource(
-							"/ui/icons/notes.png"))));
+				new ImageIcon(
+						Objects.requireNonNull(AppFrame.class.getResource(
+								"/ui/icons/notes.png"))));
 		notesB.setMargin(new Insets(0, 0, 0, 0));
 		notesB.setSelected(true);
 		this.setPreferredSize(new Dimension(1073, 300));
@@ -190,9 +189,9 @@ public class WorkPanel extends JPanel {
 		filesB.setSelected(true);
 		filesB.setMargin(new Insets(0, 0, 0, 0));
 		filesB.setIcon(
-			new ImageIcon(
-					Objects.requireNonNull(AppFrame.class.getResource(
-							"/ui/icons/files.png"))));
+				new ImageIcon(
+						Objects.requireNonNull(AppFrame.class.getResource(
+								"/ui/icons/files.png"))));
 		filesB.setVerticalTextPosition(SwingConstants.BOTTOM);
 		filesB.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -242,8 +241,8 @@ public class WorkPanel extends JPanel {
 		createClassB.setOpaque(false);
 		createClassB.setMargin(new Insets(0, 0, 0, 0));
 		createClassB.setSelected(true);
-		
-		//*****************************************************//
+
+		// *****************************************************//
 
 		toolBar.add(agendaB, null);
 		toolBar.add(eventsB, null);
@@ -279,33 +278,23 @@ public class WorkPanel extends JPanel {
 		}
 	}
 
-	public void createClassB_actionPerformed(ActionEvent e) {
-		CreateClassDialog dlg = new CreateClassDialog(App.getFrame(), Local.getString("New class"));
-
-		Dimension frmSize = App.getFrame().getSize();
-		Point loc = App.getFrame().getLocation();
-		dlg.startDate.getModel().setValue(CurrentDate.get().getDate());
-		dlg.endDate.getModel().setValue(CurrentDate.get().getDate());
-		dlg.setLocation((frmSize.width - dlg.getSize().width) / 2 + loc.x, (frmSize.height - dlg.getSize().height) / 2 + loc.y);
-		dlg.setVisible(true);
-		if (dlg.CANCELLED)
-			return;
-		CalendarDate sd = new CalendarDate((Date) dlg.startDate.getModel().getValue());
-		CalendarDate ed;
-		if(dlg.chkEndDate.isSelected())
-			ed = new CalendarDate((Date) dlg.endDate.getModel().getValue());
-		else
-			ed = null;
-		long effort = Util.getMillisFromHours(dlg.trainerIDField.getText());
-		Task newTask = CurrentProject.getTaskList().createTask(sd, ed, dlg.classNameField.getText(), dlg.roomIDCB.getSelectedIndex(),effort, dlg.descriptionField.getText(),null);
-		newTask.setProgress(((Integer)dlg.progress.getValue()).intValue());
-		CurrentStorage.get().storeTaskList(CurrentProject.getTaskList(), CurrentProject.get());
+	public void selectPanel(String pan) {
+		if (pan != null) {
+			if (pan.equals("NOTES"))
+				notesB_actionPerformed(null);
+			else if (pan.equals("TASKS"))
+				tasksB_actionPerformed(null);
+			else if (pan.equals("EVENTS"))
+				eventsB_actionPerformed(null);
+			else if (pan.equals("FILES"))
+				filesB_actionPerformed(null);
+		}
 	}
 
 	public void agendaB_actionPerformed(ActionEvent e) {
 		cardLayout1.show(panel, "DAILYITEMS");
 		dailyItemsPanel.selectPanel("AGENDA");
-		setCurrentButton(agendaB);
+		setCurrentButton(homeB);
 		Context.put("CURRENT_PANEL", "AGENDA");
 	}
 
