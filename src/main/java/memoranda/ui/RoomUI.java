@@ -70,7 +70,7 @@ public class RoomUI {
         }
 
         // Set frame properties and display
-        frame.setSize(60, 50);
+        frame.setSize(300, 150);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
