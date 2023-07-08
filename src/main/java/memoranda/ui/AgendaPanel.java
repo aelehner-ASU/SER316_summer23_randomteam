@@ -58,7 +58,7 @@ public class AgendaPanel extends JPanel {
 	//	JPopupMenu agendaPPMenu = new JPopupMenu();
 	//	JCheckBoxMenuItem ppShowActiveOnlyChB = new JCheckBoxMenuItem();
 
-	Collection expandedTasks;
+	Collection expandedRooms;
 	String gotoTask = null;
 
 	boolean isActive = true;
@@ -73,7 +73,7 @@ public class AgendaPanel extends JPanel {
 		}
 	}
 	void jbInit() throws Exception {
-		expandedTasks = new ArrayList();
+		expandedRooms = new ArrayList();
 
 		toolBar.setFloatable(false);
 		viewer.setEditable(false);
@@ -85,10 +85,10 @@ public class AgendaPanel extends JPanel {
 					String d = e.getDescription();
 					if (d.equalsIgnoreCase("memoranda:events"))
 						parentPanel.alarmB_actionPerformed(null);
-					else if (d.startsWith("memoranda:tasks")) {
+					else if (d.startsWith("memoranda:Rooms")) {
 						String id = d.split("#")[1];
 						CurrentProject.set(ProjectManager.getProject(id));
-						parentPanel.taskB_actionPerformed(null);
+						parentPanel.roomB_actionPerformed(null);
 					} else if (d.startsWith("memoranda:project")) {
 						String id = d.split("#")[1];
 						CurrentProject.set(ProjectManager.getProject(id));
@@ -127,15 +127,15 @@ public class AgendaPanel extends JPanel {
 						}
 						refresh(CurrentDate.get());
 						System.out.println("I added a sticker");
-					} else if (d.startsWith("memoranda:expandsubtasks")) {
+					} else if (d.startsWith("memoranda:expandsubRooms")) {
 						String id = d.split("#")[1];
 						gotoTask = id;
-						expandedTasks.add(id);
+						expandedRooms.add(id);
 						refresh(CurrentDate.get());
-					} else if (d.startsWith("memoranda:closesubtasks")) {
+					} else if (d.startsWith("memoranda:closesubRooms")) {
 						String id = d.split("#")[1];
 						gotoTask = id;
-						expandedTasks.remove(id);
+						expandedRooms.remove(id);
 						refresh(CurrentDate.get());
 					} else if (d.startsWith("memoranda:expandsticker")) {
 						String id = d.split("#")[1];
@@ -301,7 +301,7 @@ public class AgendaPanel extends JPanel {
 	}
 
 	public void refresh(CalendarDate date) {
-		viewer.setText(AgendaGenerator.getAgenda(date,expandedTasks));
+		viewer.setText(AgendaGenerator.getAgenda(date,expandedRooms));
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				if(gotoTask != null) {

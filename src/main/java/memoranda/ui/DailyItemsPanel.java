@@ -88,7 +88,7 @@ public class DailyItemsPanel extends JPanel {
     JPanel indicatorsPanel = new JPanel();
     JButton alarmB = new JButton();
     FlowLayout flowLayout1 = new FlowLayout();
-    JButton taskB = new JButton();
+    JButton roomB = new JButton();
     JPanel mainTabsPanel = new JPanel();
     NotesControlPanel notesControlPane = new NotesControlPanel();
     CardLayout cardLayout2 = new CardLayout();
@@ -176,18 +176,18 @@ public class DailyItemsPanel extends JPanel {
         alarmB.setIcon(new ImageIcon(main.java.memoranda.ui.AppFrame.class.getResource("/ui/icons/alarm.png")));
         flowLayout1.setAlignment(FlowLayout.RIGHT);
         flowLayout1.setVgap(0);
-        taskB.setMargin(new Insets(0, 0, 0, 0));
-        taskB.addActionListener(new java.awt.event.ActionListener() {
+        roomB.setMargin(new Insets(0, 0, 0, 0));
+        roomB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                taskB_actionPerformed(e);
+                roomB_actionPerformed(e);
             }
         });
-        taskB.setPreferredSize(new Dimension(24, 24));
-        taskB.setToolTipText(Local.getString("Active to-do tasks"));
-        taskB.setBorderPainted(false);
-        taskB.setMaximumSize(new Dimension(24, 24));
-        taskB.setOpaque(false);
-        taskB.setIcon(new ImageIcon(main.java.memoranda.ui.AppFrame.class.getResource("/ui/icons/task.png")));
+        roomB.setPreferredSize(new Dimension(24, 24));
+        roomB.setToolTipText(Local.getString("Active to-do tasks"));
+        roomB.setBorderPainted(false);
+        roomB.setMaximumSize(new Dimension(24, 24));
+        roomB.setOpaque(false);
+        roomB.setIcon(new ImageIcon(main.java.memoranda.ui.AppFrame.class.getResource("/ui/icons/task.png")));
 
         notesControlPane.setFont(new java.awt.Font("Dialog", 1, 10));
         mainTabsPanel.setLayout(cardLayout2);
@@ -425,7 +425,7 @@ public class DailyItemsPanel extends JPanel {
         indicatorsPanel.removeAll();
         if (date.equals(CalendarDate.today())) {
             if (tl.getActiveSubTasks(null,date).size() > 0)
-                indicatorsPanel.add(taskB, null);
+                indicatorsPanel.add(roomB, null);
             if (EventsScheduler.isEventScheduled()) {
                 /*String evlist = "";
                 for (Iterator it = EventsScheduler.getScheduledEvents().iterator(); it.hasNext();) {
@@ -473,8 +473,8 @@ public class DailyItemsPanel extends JPanel {
 	public String getCurrentPanel() {
 		return CurrentPanel;
 	}
-    void taskB_actionPerformed(ActionEvent e) {
-        parentPanel.tasksB_actionPerformed(null);
+    void roomB_actionPerformed(ActionEvent e) {
+        parentPanel.roomB_actionPerformed(null);
     }
 
     void alarmB_actionPerformed(ActionEvent e) {

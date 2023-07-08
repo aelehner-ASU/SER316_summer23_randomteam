@@ -581,12 +581,12 @@ public class AppFrame extends JFrame {
             }
         };
 
-        this.workPanel.dailyItemsPanel.taskB
+        this.workPanel.dailyItemsPanel.roomB
                 .addActionListener(setMenusDisabled);
         this.workPanel.dailyItemsPanel.alarmB.addActionListener(
                 setMenusDisabled);
 
-        this.workPanel.tasksB.addActionListener(setMenusDisabled);
+        this.workPanel.roomB.addActionListener(setMenusDisabled);
         this.workPanel.eventsB.addActionListener(setMenusDisabled);
         this.workPanel.filesB.addActionListener(setMenusDisabled);
         this.workPanel.agendaB.addActionListener(setMenusDisabled);

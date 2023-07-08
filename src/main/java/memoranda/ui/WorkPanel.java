@@ -39,7 +39,7 @@ public class WorkPanel extends JPanel {
 	public DailyItemsPanel dailyItemsPanel = new DailyItemsPanel(this);
 	public ResourcesPanel filesPanel = new ResourcesPanel();
 	public JButton agendaB = new JButton();
-	public JButton tasksB = new JButton();
+	public JButton roomB = new JButton();
 	public JButton eventsB = new JButton();
 	public JButton filesB = new JButton();
 	public JButton createClassB = new JButton();
@@ -130,30 +130,30 @@ public class WorkPanel extends JPanel {
 
 		////////////////////////////////////////////////////////////////////
 
-		tasksB.setSelected(true);
-		tasksB.setFont(new java.awt.Font("Dialog", 1, 10));
-		tasksB.setMargin(new Insets(0, 0, 0, 0));
-		tasksB.setIcon(
+		roomB.setSelected(true);
+		roomB.setFont(new java.awt.Font("Dialog", 1, 10));
+		roomB.setMargin(new Insets(0, 0, 0, 0));
+		roomB.setIcon(
 				new ImageIcon(
 						Objects.requireNonNull(AppFrame.class.getResource(
 								"/ui/icons/tasks.png"))));
-		tasksB.setVerticalTextPosition(SwingConstants.BOTTOM);
-		tasksB.addActionListener(new java.awt.event.ActionListener() {
+		roomB.setVerticalTextPosition(SwingConstants.BOTTOM);
+		roomB.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				tasksB_actionPerformed(e);
+				roomB_actionPerformed(e);
 			}
 		});
-		tasksB.setVerticalAlignment(SwingConstants.TOP);
-		tasksB.setText(Local.getString("Tasks"));
-		tasksB.setHorizontalTextPosition(SwingConstants.CENTER);
-		tasksB.setFocusPainted(false);
-		tasksB.setBorderPainted(false);
-		tasksB.setContentAreaFilled(false);
-		tasksB.setPreferredSize(new Dimension(50, 50));
-		tasksB.setMinimumSize(new Dimension(30, 30));
-		tasksB.setOpaque(false);
-		tasksB.setMaximumSize(new Dimension(60, 80));
-		tasksB.setBackground(Color.white);
+		roomB.setVerticalAlignment(SwingConstants.TOP);
+		roomB.setText(Local.getString("Rooms"));
+		roomB.setHorizontalTextPosition(SwingConstants.CENTER);
+		roomB.setFocusPainted(false);
+		roomB.setBorderPainted(false);
+		roomB.setContentAreaFilled(false);
+		roomB.setPreferredSize(new Dimension(50, 50));
+		roomB.setMinimumSize(new Dimension(30, 30));
+		roomB.setOpaque(false);
+		roomB.setMaximumSize(new Dimension(60, 80));
+		roomB.setBackground(Color.white);
 
 		////////////////////////////////////////////////////////////////////
 
@@ -217,36 +217,36 @@ public class WorkPanel extends JPanel {
 
 		// ****************** Class Creator **********//
 
-		createClassB.setBackground(Color.white);
-		createClassB.setMinimumSize(new Dimension(30, 30));
+		// createClassB.setBackground(Color.white);
+		// createClassB.setMinimumSize(new Dimension(30, 30));
 
-		createClassB.setFont(new java.awt.Font("Dialog", 1, 10));
-		createClassB.setPreferredSize(new Dimension(50, 50));
-		createClassB.setBorderPainted(false);
-		createClassB.setContentAreaFilled(false);
-		createClassB.setFocusPainted(false);
-		createClassB.setHorizontalTextPosition(SwingConstants.CENTER);
-		createClassB.setText(Local.getString("Class"));
-		createClassB.setVerticalAlignment(SwingConstants.TOP);
-		createClassB.setVerticalTextPosition(SwingConstants.BOTTOM);
-		// createClassB.addActionListener(new java.awt.event.ActionListener() {
-		// public void actionPerformed(ActionEvent e) {
+		// createClassB.setFont(new java.awt.Font("Dialog", 1, 10));
+		// createClassB.setPreferredSize(new Dimension(50, 50));
+		// createClassB.setBorderPainted(false);
+		// createClassB.setContentAreaFilled(false);
+		// createClassB.setFocusPainted(false);
+		// createClassB.setHorizontalTextPosition(SwingConstants.CENTER);
+		// createClassB.setText(Local.getString("Class"));
+		// createClassB.setVerticalAlignment(SwingConstants.TOP);
+		// createClassB.setVerticalTextPosition(SwingConstants.BOTTOM);
+		// // createClassB.addActionListener(new java.awt.event.ActionListener() {
+		// // public void actionPerformed(ActionEvent e) {
 		// createClassB_actionPerformed(e);
 		// }
 		// });
-		createClassB.setIcon(
-				new ImageIcon(Objects.requireNonNull(
-						AppFrame.class.getResource(
-								"/ui/icons/create_class_icon.png"))));
-		createClassB.setOpaque(false);
-		createClassB.setMargin(new Insets(0, 0, 0, 0));
-		createClassB.setSelected(true);
+		// createClassB.setIcon(
+		// 		new ImageIcon(Objects.requireNonNull(
+		// 				AppFrame.class.getResource(
+		// 						"/ui/icons/create_class_icon.png"))));
+		// createClassB.setOpaque(false);
+		// createClassB.setMargin(new Insets(0, 0, 0, 0));
+		// createClassB.setSelected(true);
 
 		// *****************************************************//
 
 		toolBar.add(agendaB, null);
 		toolBar.add(eventsB, null);
-		toolBar.add(tasksB, null);
+		toolBar.add(roomB, null);
 		toolBar.add(notesB, null);
 		toolBar.add(filesB, null);
 		toolBar.add(createClassB, null);
@@ -267,8 +267,8 @@ public class WorkPanel extends JPanel {
 		if (pan != null) {
 			if (pan.equals("NOTES"))
 				notesB_actionPerformed(null);
-			else if (pan.equals("TASKS"))
-				tasksB_actionPerformed(null);
+			else if (pan.equals("ROOMS"))
+				roomB_actionPerformed(null);
 			else if (pan.equals("EVENTS"))
 				eventsB_actionPerformed(null);
 			else if (pan.equals("FILES"))
@@ -321,11 +321,11 @@ public class WorkPanel extends JPanel {
 		Context.put("CURRENT_PANEL", "NOTES");
 	}
 
-	public void tasksB_actionPerformed(ActionEvent e) {
+	public void roomB_actionPerformed(ActionEvent e) {
 		cardLayout1.show(panel, "DAILYITEMS");
-		dailyItemsPanel.selectPanel("TASKS");
-		setCurrentButton(tasksB);
-		Context.put("CURRENT_PANEL", "TASKS");
+		dailyItemsPanel.selectPanel("ROOMS");
+		setCurrentButton(roomB);
+		Context.put("CURRENT_PANEL", "ROOMS");
 	}
 
 	public void eventsB_actionPerformed(ActionEvent e) {
