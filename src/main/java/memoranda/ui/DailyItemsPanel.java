@@ -165,7 +165,7 @@ public class DailyItemsPanel extends JPanel {
         alarmB.setMaximumSize(new Dimension(24, 24));
         alarmB.setOpaque(false);
         alarmB.setPreferredSize(new Dimension(24, 24));
-        alarmB.setToolTipText(Local.getString("Active events"));
+        alarmB.setToolTipText(Local.getString("Active classes"));
         alarmB.setBorderPainted(false);
         alarmB.setMargin(new Insets(0, 0, 0, 0));
         alarmB.addActionListener(new java.awt.event.ActionListener() {

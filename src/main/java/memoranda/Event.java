@@ -20,13 +20,9 @@ public interface Event {
     
     String getId();
     
-    //CalendarDate getDate();
-    
     int getHour();
     
     int getMinute();
-    
-    //Date getTime();
     
     String getText();
     
@@ -43,5 +39,9 @@ public interface Event {
     String getTimeString();
     
 	boolean getWorkingDays();
+
+    boolean getClassType();
+    boolean getPublicClass();
+    boolean getPrivateClass();
     
 }

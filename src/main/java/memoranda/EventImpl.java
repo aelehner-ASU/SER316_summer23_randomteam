@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 import main.java.memoranda.date.CalendarDate;
+import main.java.memoranda.ui.EventDialog;
 import main.java.memoranda.util.Local;
 import nu.xom.Attribute;
 import nu.xom.Element;
@@ -115,13 +116,7 @@ public class EventImpl implements Event, Comparable {
      * @see main.java.memoranda.Event#getTime()
      */
     public Date getTime() {
-    	//Deprecated methods
-		//Date d = new Date();
-		//d.setHours(getHour());
-		//d.setMinutes(getMinute());
-		//d.setSeconds(0);
-		//End deprecated methods
-
+        
 		Date d = new Date(); //Revision to fix deprecated methods (jcscoobyrs) 12-NOV-2003 14:26:00
 		Calendar calendar = new GregorianCalendar(Local.getCurrentLocale()); //Revision to fix deprecated methods (jcscoobyrs) 12-NOV-2003 14:26:00
 		calendar.setTime(d); //Revision to fix deprecated methods (jcscoobyrs) 12-NOV-2003 14:26:00
@@ -140,6 +135,22 @@ public class EventImpl implements Event, Comparable {
         if (a != null && a.getValue().equals("true")) return true;
         return false;
 	}
+
+    public boolean getClassType() {
+        Attribute a = _elem.getAttribute("classType");
+        if (a != null && a.getValue().equals("true")) return true;
+        return false;
+    }
+
+    public boolean getPublicClass() {
+        if (EventDialog.publicClassBox.isSelected()) return true;
+        return false;
+    }
+
+    public boolean getPrivateClass() {
+        if (EventDialog.privateClassBox.isSelected()) return true;
+        return false;
+    }
 	
 	public int compareTo(Object o) {
 		Event event = (Event) o;
