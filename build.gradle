@@ -61,6 +61,7 @@ checkstyle {
   showViolations = false
 }
 
+
 tasks.withType(Checkstyle) {
   reports {
     html.enabled = true
@@ -88,3 +89,4 @@ spotbugs {
     showProgress = true
     effort = 'max'
 }
+
