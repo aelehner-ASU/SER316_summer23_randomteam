@@ -1,9 +1,8 @@
-/**
  * UserAccountsPanel.java
  * Runs window for user log in and creating new account
  *
  * @author Anna Lehner
- * @version 6/24/23 Sprint 2
+ * @version 7/8/23 Sprint 3
  */
 package main.java.memoranda.ui;
 
@@ -66,8 +65,14 @@ public class UserAccountsPanel {
         trainer.setText("Trainer");
         JLabel username = new JLabel("Username:");
         JLabel password = new JLabel("Password");
+        JLabel beltrank = new JLabel("Belt Rank:");
         JTextField usernameField = new JTextField("");
         JTextField passwordField = new JTextField("");
+        String[] beltRankStrings = {"WHITE", "YELLOW", "ORANGE", "PURPLE", "BLUE", 
+        		"BLUE STRIPE", "GREEN", "GREEN STRIPE", "BROWN 1", "BROWN 2",
+        		"BLACK 1", "BLACK 2", "BLACK 3" };
+        JComboBox beltRankList = new JComboBox(beltRankStrings);
+        beltRankList.setSelectedIndex(0);
         JButton create = new JButton("Create");
         JButton cancel = new JButton("Cancel");
 
@@ -78,13 +83,14 @@ public class UserAccountsPanel {
         group.add(student);
         group.add(trainer);
 
-        
         fieldsPanel.add(student);
         fieldsPanel.add(trainer);
         fieldsPanel.add(username);
         fieldsPanel.add(usernameField);
         fieldsPanel.add(password);
         fieldsPanel.add(passwordField);
+        fieldsPanel.add(beltrank);
+        fieldsPanel.add(beltRankList);
         buttonPane.add(create);
         buttonPane.add(cancel);
         NAframe.add(fieldsPanel, BorderLayout.PAGE_START);
@@ -108,13 +114,24 @@ public class UserAccountsPanel {
             	else {
             		a = 0;
             		}
+            	int b = beltRankList.getSelectedIndex();
             	try {
-            	UserAccount newUA = new UserAccount(inUsername, inPassword, a);
+            	UserAccount newUA = new UserAccount(inUsername, inPassword, a, b);
             	newUA.write();
             	}
             	catch (IOException ex) {};
-                NAframe.dispose();               
+                NAframe.dispose();
+                NAframe.setVisible(false);
+            }           
+        });
+        /**
+         * Action Listener for "Cancel" button, closes window
+         */
+        cancel.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	NAframe.dispose();
+            	NAframe.setVisible(false);
             }
-        });       
+        });
 	}
 }
