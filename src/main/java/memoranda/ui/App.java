@@ -117,10 +117,12 @@ public class App {
 		 */
 		/* Used to maximize the screen if the JVM Version if 1.4 or higher */
 		/* --------------------------------------------------------------- */
-		double JVMVer =
-			Double
-				.valueOf(System.getProperty("java.version").substring(0, 3))
-				.doubleValue();
+		openWindow();
+
+	}
+
+	public static void openWindow() {
+		double JVMVer = Double.valueOf(System.getProperty("java.version").substring(0, 3)).doubleValue();
 
 		frame.pack();
 		if (JVMVer >= 1.4) {
@@ -135,7 +137,6 @@ public class App {
 		frame.setVisible(true);
 		frame.toFront();
 		frame.requestFocus();
-
 	}
 
 	public static void closeWindow() {
@@ -145,6 +146,11 @@ public class App {
 		frame.dispose();
 		frame.doExit();
 	}
+
+	/*public static void minWindow() {
+		frame.setExtendedState(Frame.ICONIFIED);
+	}*/
+
 
 	/**
 	 * Method showSplash.
