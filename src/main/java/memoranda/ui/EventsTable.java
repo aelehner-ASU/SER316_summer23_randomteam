@@ -22,6 +22,7 @@ import main.java.memoranda.EventsManager;
 import main.java.memoranda.date.CalendarDate;
 import main.java.memoranda.date.CurrentDate;
 import main.java.memoranda.date.DateListener;
+import main.java.memoranda.ui.EventDialog;
 import main.java.memoranda.util.Local;
 /**
  *
@@ -32,7 +33,8 @@ public class EventsTable extends JTable {
     public static final int EVENT = 100;
     public static final int EVENT_ID = 101;
 
-    Vector events = new Vector();
+    //Vector events = new Vector();
+    Vector<Event> events = new Vector<>();
     /**
      * Constructor for EventsTable.
      */
@@ -96,9 +98,11 @@ public class EventsTable extends JTable {
     class EventsTableModel extends AbstractTableModel {
 
         String[] columnNames = {
-            //Local.getString("Task name"),
             Local.getString("Time"),
-                Local.getString("Text")
+            Local.getString("Text"),
+            Local.getString("Public Class?"),
+            Local.getString("Private Class?")
+
         };
 
         EventsTableModel() {
@@ -106,7 +110,7 @@ public class EventsTable extends JTable {
         }
 
         public int getColumnCount() {
-            return 2;
+            return 4;
         }
 
         public int getRowCount() {
@@ -123,12 +127,13 @@ public class EventsTable extends JTable {
         public Object getValueAt(int row, int col) {
            Event ev = (Event)events.get(row);
            if (col == 0)
-                //return ev.getHour()+":"+ev.getMinute();
                 return ev.getTimeString();
            else if (col == 1)
                 return ev.getText();
-           else if (col == EVENT_ID)
-                return ev.getId();
+           else if (col == 2)
+                return ev.getPublicClass();
+           else if (col == 3)
+                return ev.getPrivateClass();
            else return ev;
         }
 
