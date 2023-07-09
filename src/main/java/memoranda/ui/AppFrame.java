@@ -679,7 +679,7 @@ public class AppFrame extends JFrame {
     }
 
     public void doRestore() {
-        App.show();
+        App.openWindow();
     }
 
     //Help | About action performed
