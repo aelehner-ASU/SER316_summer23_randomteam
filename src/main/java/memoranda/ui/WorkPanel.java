@@ -1,9 +1,11 @@
 package main.java.memoranda.ui;
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.CardLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
-import java.util.Date;
-import java.util.Objects;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -14,14 +16,8 @@ import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 
-import main.java.memoranda.CurrentProject;
-import main.java.memoranda.Task;
-import main.java.memoranda.date.CalendarDate;
-import main.java.memoranda.date.CurrentDate;
 import main.java.memoranda.util.Context;
-import main.java.memoranda.util.CurrentStorage;
 import main.java.memoranda.util.Local;
-import main.java.memoranda.util.Util;
 
 /**
  * 
@@ -42,7 +38,6 @@ public class WorkPanel extends JPanel {
 	public JButton tasksB = new JButton();
 	public JButton eventsB = new JButton();
 	public JButton filesB = new JButton();
-	public JButton createClassB = new JButton();
 	JButton currentB = null;
 	Border border1;
 
@@ -72,8 +67,6 @@ public class WorkPanel extends JPanel {
 		toolBar.setFloatable(false);
 		panel.setLayout(cardLayout1);
 
-		////////////////////////////////////////////////////////////////////
-
 		agendaB.setBackground(Color.white);
 		agendaB.setMaximumSize(new Dimension(60, 80));
 		agendaB.setMinimumSize(new Dimension(30, 30));
@@ -93,14 +86,13 @@ public class WorkPanel extends JPanel {
 			}
 		});
 		agendaB.setIcon(
-				new ImageIcon(
-						Objects.requireNonNull(AppFrame.class.getResource(
-								"/ui/icons/agenda.png"))));
+			new ImageIcon(
+				main.java.memoranda.ui.AppFrame.class.getResource(
+					"/ui/icons/agenda.png")));
+
 		agendaB.setOpaque(false);
 		agendaB.setMargin(new Insets(0, 0, 0, 0));
 		agendaB.setSelected(true);
-
-		////////////////////////////////////////////////////////////////////
 
 		eventsB.setBackground(Color.white);
 		eventsB.setMaximumSize(new Dimension(60, 80));
@@ -121,22 +113,22 @@ public class WorkPanel extends JPanel {
 			}
 		});
 		eventsB.setIcon(
-				new ImageIcon(
-						Objects.requireNonNull(AppFrame.class.getResource(
-								"/ui/icons/events.png"))));
+			new ImageIcon(
+				main.java.memoranda.ui.AppFrame.class.getResource(
+					"/ui/icons/events.png")));
+
 		eventsB.setOpaque(false);
 		eventsB.setMargin(new Insets(0, 0, 0, 0));
 		// eventsB.setSelected(true);
-
-		////////////////////////////////////////////////////////////////////
 
 		tasksB.setSelected(true);
 		tasksB.setFont(new java.awt.Font("Dialog", 1, 10));
 		tasksB.setMargin(new Insets(0, 0, 0, 0));
 		tasksB.setIcon(
-				new ImageIcon(
-						Objects.requireNonNull(AppFrame.class.getResource(
-								"/ui/icons/tasks.png"))));
+			new ImageIcon(
+				main.java.memoranda.ui.AppFrame.class.getResource(
+					"/ui/icons/tasks.png")));
+
 		tasksB.setVerticalTextPosition(SwingConstants.BOTTOM);
 		tasksB.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -154,8 +146,6 @@ public class WorkPanel extends JPanel {
 		tasksB.setOpaque(false);
 		tasksB.setMaximumSize(new Dimension(60, 80));
 		tasksB.setBackground(Color.white);
-
-		////////////////////////////////////////////////////////////////////
 
 		notesB.setFont(new java.awt.Font("Dialog", 1, 10));
 		notesB.setBackground(Color.white);
@@ -177,21 +167,21 @@ public class WorkPanel extends JPanel {
 			}
 		});
 		notesB.setIcon(
-				new ImageIcon(
-						Objects.requireNonNull(AppFrame.class.getResource(
-								"/ui/icons/notes.png"))));
+			new ImageIcon(
+				main.java.memoranda.ui.AppFrame.class.getResource(
+					"/ui/icons/notes.png")));
+
 		notesB.setMargin(new Insets(0, 0, 0, 0));
 		notesB.setSelected(true);
 		this.setPreferredSize(new Dimension(1073, 300));
 
-		////////////////////////////////////////////////////////////////////
-
 		filesB.setSelected(true);
 		filesB.setMargin(new Insets(0, 0, 0, 0));
 		filesB.setIcon(
-				new ImageIcon(
-						Objects.requireNonNull(AppFrame.class.getResource(
-								"/ui/icons/files.png"))));
+			new ImageIcon(
+				main.java.memoranda.ui.AppFrame.class.getResource(
+					"/ui/icons/files.png")));
+
 		filesB.setVerticalTextPosition(SwingConstants.BOTTOM);
 		filesB.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -244,11 +234,13 @@ public class WorkPanel extends JPanel {
 
 		// *****************************************************//
 
+
 		toolBar.add(agendaB, null);
 		toolBar.add(eventsB, null);
 		toolBar.add(tasksB, null);
 		toolBar.add(notesB, null);
 		toolBar.add(filesB, null);
+
 		//toolBar.add(createClassB, null);
 
 		currentB = agendaB;
@@ -273,39 +265,9 @@ public class WorkPanel extends JPanel {
 				eventsB_actionPerformed(null);
 			else if (pan.equals("FILES"))
 				filesB_actionPerformed(null);
-			// else if (pan.equals("CLASS"))
-			// createClassB_actionPerformed(null);
 		}
 	}
 
-	// public void createClassB_actionPerformed(ActionEvent e) {
-	// CreateClassDialog dlg = new CreateClassDialog(App.getFrame(),
-	// Local.getString("New class"));
-
-	// Dimension frmSize = App.getFrame().getSize();
-	// Point loc = App.getFrame().getLocation();
-	// dlg.startDate.getModel().setValue(CurrentDate.get().getDate());
-	// dlg.endDate.getModel().setValue(CurrentDate.get().getDate());
-	// dlg.setLocation((frmSize.width - dlg.getSize().width) / 2 + loc.x,
-	// (frmSize.height - dlg.getSize().height) / 2 + loc.y);
-	// dlg.setVisible(true);
-	// if (dlg.CANCELLED)
-	// return;
-	// CalendarDate sd = new CalendarDate((Date)
-	// dlg.startDate.getModel().getValue());
-	// CalendarDate ed;
-	// if(dlg.chkEndDate.isSelected())
-	// ed = new CalendarDate((Date) dlg.endDate.getModel().getValue());
-	// else
-	// ed = null;
-	// long effort = Util.getMillisFromHours(dlg.trainerIDField.getText());
-	// Task newTask = CurrentProject.getTaskList().createTask(sd, ed,
-	// dlg.classNameField.getText(), dlg.roomIDCB.getSelectedIndex(),effort,
-	// dlg.descriptionField.getText(),null);
-	// newTask.setProgress(((Integer)dlg.progress.getValue()).intValue());
-	// CurrentStorage.get().storeTaskList(CurrentProject.getTaskList(),
-	// CurrentProject.get());
-	// }
 
 	public void agendaB_actionPerformed(ActionEvent e) {
 		cardLayout1.show(panel, "DAILYITEMS");
