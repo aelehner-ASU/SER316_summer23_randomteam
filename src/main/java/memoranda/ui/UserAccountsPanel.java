@@ -1,4 +1,5 @@
- * UserAccountsPanel.java
+/*
+* UserAccountsPanel.java
  * Runs window for user log in and creating new account
  *
  * @author Anna Lehner
