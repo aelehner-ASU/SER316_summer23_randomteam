@@ -209,6 +209,7 @@ I would also advise you to fill out already the Contributions section (End of sp
     - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/2c2bd934de551ce88650fe613dffb20e335910a9
     - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/d29f4262c825316bb8d04528e7f36111472bc087
     - https://github.com/aelehner-ASU/SER316_summer23_randomteam/pull/41
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/6f35a06bbfbbc668dd35bc57f9d6319f6cd30ea4
 
    **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
 
@@ -227,7 +228,9 @@ I would also advise you to fill out already the Contributions section (End of sp
  
  **What was your main contribution to the Quality Policy documentation?:
 
-    - info
+    - Making sure that all of us were reviewing each others' work while still maintaining the flexability of a team that was on and off
+    when it came to communication.  As Scrum leader for 3, I maintained the Taiga board and was responsible for arranging meeting times.  And
+    meetings happened!  So I guess that went well.
         
 #### Tanya Mercado -- replace this with your name:
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
