@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
+import java.awt.event.WindowStateListener;
 import java.io.File;
 import java.util.Collection;
 import java.util.HashMap;
@@ -91,6 +92,7 @@ public class AppFrame extends JFrame {
 
     static Vector exitListeners = new Vector();
 
+
     public Action prjPackAction = new AbstractAction("Pack current project") {
         public void actionPerformed(ActionEvent e) {
             doPrjPack();
@@ -139,7 +141,7 @@ public class AppFrame extends JFrame {
         };
     
     JMenuItem jMenuFileNewPrj = new JMenuItem();
-        JMenuItem jMenuFileNewNote = new JMenuItem(workPanel.dailyItemsPanel.editorPanel.newAction);
+    JMenuItem jMenuFileNewNote = new JMenuItem(workPanel.dailyItemsPanel.editorPanel.newAction);
     JMenuItem jMenuFilePackPrj = new JMenuItem(prjPackAction);
     JMenuItem jMenuFileUnpackPrj = new JMenuItem(prjUnpackAction);
     JMenuItem jMenuFileExportPrj = new JMenuItem(exportNotesAction);
@@ -262,7 +264,10 @@ public class AppFrame extends JFrame {
         contentPane = (JPanel) this.getContentPane();
         contentPane.setLayout(borderLayout1);
         //this.setSize(new Dimension(800, 500));
-        this.setTitle("Memoranda - " + CurrentProject.get().getTitle());
+
+        this.setTitle("CoolGym - " + CurrentProject.get().getTitle());
+
+       
         //Added a space to App.VERSION_INFO to make it look some nicer
         statusBar.setText(" Version:" + App.VERSION_INFO + " (Build "
                 + App.BUILD_INFO + " )");  //the symbols that are not displayed correctly
@@ -301,7 +306,7 @@ public class AppFrame extends JFrame {
             }
         });        
         
-        jMenuHelpAbout.setText(Local.getString("About Memoranda"));
+        jMenuHelpAbout.setText(Local.getString("About Level Up Gym"));
         jMenuHelpAbout.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 jMenuHelpAbout_actionPerformed(e);
@@ -626,7 +631,9 @@ public class AppFrame extends JFrame {
             }
 
             public void projectWasChanged() {
-                setTitle("Memoranda - " + CurrentProject.get().getTitle());
+
+                setTitle("CoolGym - " + CurrentProject.get().getTitle());
+
             }
         });
 
@@ -667,6 +674,12 @@ public class AppFrame extends JFrame {
     public void doMinimize() {
         exitNotify();
         App.closeWindow();
+        //App.minWindow();
+
+    }
+
+    public void doRestore() {
+        App.openWindow();
     }
 
     //Help | About action performed
@@ -682,15 +695,27 @@ public class AppFrame extends JFrame {
 
     protected void processWindowEvent(WindowEvent e) {
         if (e.getID() == WindowEvent.WINDOW_CLOSING) {
-            if (Configuration.get("ON_CLOSE").equals("exit"))
-                doExit();
-            else
+            if (Configuration.get("ON_CLOSE").equals("exit")){
+                System.out.println("trys to close window");
+                //doExit();
+                App.closeWindow();
+            }   
+            else{
                 doMinimize();
+                System.out.println("trys to close / min window");
+            }
         }
-        else if ((e.getID() == WindowEvent.WINDOW_ICONIFIED)) {
+        else if (e.getID() == WindowEvent.WINDOW_ICONIFIED) {
             super.processWindowEvent(new WindowEvent(this,
                     WindowEvent.WINDOW_CLOSING));
+            System.out.println("trys to restore min");
             doMinimize();
+        }
+        else if (e.getID() == WindowEvent.WINDOW_DEICONIFIED){
+            super.processWindowEvent(new WindowEvent(this,
+                    WindowEvent.WINDOW_STATE_CHANGED));
+            System.out.println("trys to restore window");
+            doRestore();
         }
         else
             super.processWindowEvent(e);

@@ -117,10 +117,12 @@ public class App {
 		 */
 		/* Used to maximize the screen if the JVM Version if 1.4 or higher */
 		/* --------------------------------------------------------------- */
-		double JVMVer =
-			Double
-				.valueOf(System.getProperty("java.version").substring(0, 3))
-				.doubleValue();
+		openWindow();
+
+	}
+
+	public static void openWindow() {
+		double JVMVer = Double.valueOf(System.getProperty("java.version").substring(0, 3)).doubleValue();
 
 		frame.pack();
 		if (JVMVer >= 1.4) {
@@ -135,7 +137,6 @@ public class App {
 		frame.setVisible(true);
 		frame.toFront();
 		frame.requestFocus();
-
 	}
 
 	public static void closeWindow() {
@@ -146,6 +147,11 @@ public class App {
 		frame.doExit();
 	}
 
+	/*public static void minWindow() {
+		frame.setExtendedState(Frame.ICONIFIED);
+	}*/
+
+
 	/**
 	 * Method showSplash.
 	 */
@@ -154,14 +160,14 @@ public class App {
 		ImageIcon spl =
 			new ImageIcon(App.class.getResource("/ui/splash.png"));
 		JLabel l = new JLabel();
-		l.setSize(400, 300);
+		l.setSize(600, 400);
 		l.setIcon(spl);
 		splash.getContentPane().add(l);
-		splash.setSize(400, 300);
+		splash.setSize(600, 400);
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		splash.setLocation(
-			(screenSize.width - 400) / 2,
-			(screenSize.height - 300) / 2);
+			(screenSize.width - 600) / 2,
+			(screenSize.height - 400) / 2);
 		splash.setUndecorated(true);
 		splash.setVisible(true);
 	}

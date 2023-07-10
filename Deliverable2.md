@@ -44,19 +44,18 @@ I would also advise you to already fill out the Contributions section (End of sp
 
 | Date  | Who did not attend  |Meeting notes (very brief)   | Burndown Info (on track, ahead behind is enough) | TravisCI info (does the master pass) | Additional Info  |
 |---|---|---|---|--|--|
-| 5/30 | Tanya, Bereket | Discuss US and GIt pulls  |  n/a | n/a | none |
-| 6/8  | Anna, Tanya  | US tasks, approve pulls | n/a  | n/a | none |
-| 6/9  | Tanya, Anna, Chris | Updating on status | n/a  | n/a  | none |
-| 6/10 | Anna, Tanya | Update Git, finish Deliverable | n/a  | n/a | none |
+| 6/14 | Tanya, Alan | Discuss US and GIt pulls  |  n/a | n/a | none |
+| 6/15  | Tanya  | US tasks, approve pulls | n/a  | n/a | none |
+
 
 ### Meeting Summary:
 
 > Add rows as needed and add the number how many meetings for each team member:
 
-   Alan : 4
-   Chris : 3
-   Bereket : 3
-   Anna : 1
+   Alan : 1
+   Chris : 2
+   Bereket : 2
+   Anna : 2
    Tanya : 0
 
 
