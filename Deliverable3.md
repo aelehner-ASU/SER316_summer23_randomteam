@@ -150,7 +150,9 @@ I would also advise you to fill out already the Contributions section (End of sp
 #### Chris Boyd -- replace this with your name:
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
 
-    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/pull/2
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/b4a1ac062f0668b71a6900e8d0ada5aa7f2c8046
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/a64a6bb7cfe7f221b538ab1065bffc780e16f94a
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/f1345c8285eb82683bd346ff17ed7cde193f082b
 
    **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
 
@@ -169,7 +171,7 @@ I would also advise you to fill out already the Contributions section (End of sp
  
  **What was your main contribution to the Quality Policy documentation?:
 
-    - Helping in planning scrum workflow. 
+    - Helping in planning workflow and peer review. 
     
 #### Bereket Amonie -- replace this with your name:
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
