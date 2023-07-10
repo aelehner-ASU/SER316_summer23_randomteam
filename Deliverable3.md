@@ -5,7 +5,7 @@
 
 **Topic you chose:** Gym Scheduling
 
-**Sprint Number:** 1
+**Sprint Number:** 3
 
 **Scrum Master**: Anna Lehner
 
@@ -123,7 +123,9 @@ I would also advise you to fill out already the Contributions section (End of sp
   **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
 
     - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/b90c073726b9d8a4a8d0047f014b60efbc652d91
-    - link2
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/pull/65/commits/cb8caf5b99fc44937134b9e71a42fd8795a9caf5
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/pull/66/commits/eb2a4f09bbf0ee3c681a8f1bce0d5e9867725ab1
+    - https://github.com/aelehner-ASU/SER316_summer23_randomteam/pull/67/commits/7109ff67543f75d4fe15063a80143774f2ea993c
 
    **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
 
@@ -132,8 +134,8 @@ I would also advise you to fill out already the Contributions section (End of sp
 
   **GitHub links to your Code Reviews (up to 3 links) -- Sprint 2 and 3:
 
-    - link1
-    - link2
+    - [link1](https://github.com/aelehner-ASU/SER316_summer23_randomteam/pull/22)
+    - [link2](https://github.com/aelehner-ASU/SER316_summer23_randomteam/pull/2)
 
   **How did you contribute to Static Analysis -- Sprint 3:
 
