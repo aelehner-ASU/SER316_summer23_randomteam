@@ -193,7 +193,8 @@ I would also advise you to fill out already the Contributions section (End of sp
 
     - [Review and Add check style and SpotBugs configuration](https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/44b5a983eb879b75ba56a258ce2500ecb97a4376)
     - [Review PR Task#82](https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/9d0d7d45e183c5aaab738c9553c6c98127649e34)
-    - [Review PR delieverable3] (https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/507e49b5872d3d9186a4783ee93c0738dcb17a43)
+    - [Review PR delieverable3](https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/507e49b5872d3d9186a4783ee93c0738dcb17a43)
+      
   **How did you contribute to Static Analysis -- Sprint 3:
 
     - link1
