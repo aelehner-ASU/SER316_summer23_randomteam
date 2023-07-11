@@ -178,9 +178,9 @@ I would also advise you to fill out already the Contributions section (End of sp
 
 - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/f77181028808a9246dbdefc78afd9b4e4af1897f
 - https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/41183f1d936c840bd1367207f83cc5972f5ceb96
-- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/d0513bc80594f39bf208313d8f47579a52dbfcbe
-- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/37cc2afc1e1f1213da28503dc5d010007e41b51a
-- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/246e91fe67e62f6ddef9342a18bdb3c609f3a394
+- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/1d771d78bb5c72b030bba7503d84f96e26ac7dd8
+- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/f4292b5bd6b46b1a8f2d93ea73326b648bb8c82c
+- https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/d56609584a127a79ebb031f75181e7a907f473c8
 
    **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
 
@@ -191,9 +191,9 @@ I would also advise you to fill out already the Contributions section (End of sp
 
   **GitHub links to your Code Reviews (up to 3 links) -- Sprint 2 and 3:
 
-    - [Review Add checkstyle and SpotBugs configuration](https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/44b5a983eb879b75ba56a258ce2500ecb97a4376)
+    - [Review and Add check style and SpotBugs configuration](https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/44b5a983eb879b75ba56a258ce2500ecb97a4376)
     - [Review PR Task#82](https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/9d0d7d45e183c5aaab738c9553c6c98127649e34)
-
+    - [Review PR delieverable3] (https://github.com/aelehner-ASU/SER316_summer23_randomteam/commit/507e49b5872d3d9186a4783ee93c0738dcb17a43)
   **How did you contribute to Static Analysis -- Sprint 3:
 
     - link1
@@ -228,7 +228,7 @@ I would also advise you to fill out already the Contributions section (End of sp
  
  **What was your main contribution to the Quality Policy documentation?:
 
-    - Making sure that all of us were reviewing each others' work while still maintaining the flexability of a team that was on and off
+    - Making sure that all of us were reviewing each others' work while still maintaining the flexibility of a team that was on and off
     when it came to communication.  As Scrum leader for 3, I maintained the Taiga board and was responsible for arranging meeting times.  And
     meetings happened!  So I guess that went well.
         
